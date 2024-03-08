@@ -1,0 +1,44 @@
+{
+    "manifest_version": 2,
+    "theme_color": "#f35731",
+    "background_color": "#ffffff",
+    "scope": ".",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "app_name": "Seven Capital App",
+    "name": "Seven Capital App",
+    "short_name": "Seven Capital App",
+    "description": "Seven Capital App",
+    "version": "1.0.0.0",
+    "permissions": [
+        "tabs", 
+        "cookies",
+        "notifications",
+        "https://app.seven7captal.com/"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "19": "/assets/img/logo.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "assets/js/app.js"
+        ]
+    },
+    "options_page": "options.html",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

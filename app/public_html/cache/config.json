@@ -1,0 +1,172 @@
+{
+    "data": {
+        "settings__getData": {
+            "__v": 0,
+            "_id": "59e655824c913cf5028a20e7",
+            "app_modules": [
+                "financial",
+                "commissioning_binary",
+                "commissioning_unilevel",
+                "distributors"
+            ],
+            "career_plan": {
+                "activation": {
+                    "value": 10000
+                },
+                "period": null
+            },
+            "commissioning": {
+                "single_link": false
+            },
+            "company": {
+                "address": "R. Gen. Osório, 127 - Sala 313 - Centro, Vitória - ES, 29010-035",
+                "contact": {
+                    "email": "contato@brauntech.com.br",
+                    "phone": "(27) 3024-2032",
+                    "phone_mobile": ""
+                },
+                "copyright": "Neo7i. Todos os direitos reservados.",
+                "copyright_year": "2015",
+                "legal": {
+                    "cnpj": "00.000.000/0000-00",
+                    "name": "Neo7i"
+                },
+                "name": "Neo7i Demo",
+                "social": {
+                    "facebook": "",
+                    "instagram": "",
+                    "twitter": null,
+                    "youtube": ""
+                }
+            },
+            "office": {
+                "login": {
+                    "url": "https://user-app.commerce.demo.brauntech.com.br/login"
+                },
+                "name": "Seven Capital App",
+                "register": {
+                    "duplicity": {
+                        "cnpj": true,
+                        "cpf": true,
+                        "email": false,
+                        "mobile_phone": false
+                    },
+                    "force_address_fill": false,
+                    "url": "https://cadastro.brauntech.com.br",
+                    "use_account_validation": false
+                },
+                "url": "https://user-app.commerce.demo.brauntech.com.br",
+                "user_root": "weyboo"
+            },
+            "payment": {
+                "currency": "BRL"
+            },
+            "site": {
+                "name": "Neo7i",
+                "url": "https://brauntech.com.br"
+            },
+            "smtp": {
+                "email_contact_us": "sac@weyboo.com",
+                "email_finalized_invoices": "pedidos@weyboo.com",
+                "email_sent_from": "no-reply@weyboo.com",
+                "email_unsubscribe": "unsubscribe@weyboo.com"
+            },
+            "spaces": {
+                "bucket": "60a4f558-51a4-5cba-9bd9-99fc-67017a21"
+            },
+            "store": {
+                "default_local_account_id": null,
+                "default_postal_code": "29010035",
+                "discount": {
+                    "distribution_center": 6000,
+                    "franchise": 6000,
+                    "marketing_customer": 0,
+                    "selling_point": 5500,
+                    "simple_customer": 0
+                },
+                "invoices": {
+                    "lifespan": null,
+                    "mirror": {
+                        "print": {
+                            "quantity_pos": "before_product"
+                        }
+                    }
+                },
+                "login": {
+                    "url": ""
+                },
+                "name": "Weyboo",
+                "payment": {
+                    "intermediaries": {
+                        "asaas": {
+                            "api_key": "",
+                            "enabled": false
+                        },
+                        "gerencianet": {
+                            "client_id": "",
+                            "client_secret": "",
+                            "enabled": false,
+                            "mode": "sandbox"
+                        },
+                        "pagarme": {
+                            "enabled": false,
+                            "mode": "sandbox",
+                            "public_key": "",
+                            "secret_key": ""
+                        },
+                        "pagseguro": {
+                            "email": "",
+                            "enabled": null,
+                            "mode": "production",
+                            "token": ""
+                        }
+                    },
+                    "message": null,
+                    "voucher_credit_as": "not_credited"
+                },
+                "purchase": {
+                    "min_value": 5000,
+                    "pre_shipping": false
+                },
+                "register": {
+                    "url": ""
+                },
+                "url": "https://store.demo.brauntech.com.br"
+            },
+            "wallet": {
+                "transfer": {
+                    "distribution_center": {
+                        "enabled": true
+                    },
+                    "franchise": {
+                        "enabled": true
+                    },
+                    "selling_point": {
+                        "enabled": true
+                    },
+                    "user": {
+                        "enabled": false
+                    }
+                }
+            },
+            "withdrawal": {
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "days_of_week": null,
+                "enabled": true,
+                "end_time": "00:00",
+                "fee_fixed_value": 0,
+                "fee_percentage": 0,
+                "max_value": 0,
+                "min_value": 5000,
+                "release_type": "days_specific",
+                "start_time": "00:00"
+            }
+        }
+    }
+}

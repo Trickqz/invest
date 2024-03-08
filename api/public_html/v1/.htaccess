@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+
+    # Habilita o mod_rewrite
+    RewriteEngine On
+
+    php_flag display_errors off
+    
+    # Caso a URL solicitada não seja um arquivo ou diretório...
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # E o arquivo solicitado não seja das extensões abaixo, 
+    # redireciona a requisição para o arquivo "api.php" fazer o tratamento
+    RewriteRule !\.(js|ico|txt|gif|bmp|jpeg|jpg|png|css|log|rss|zip|xml|sql|pdf|doc|docx|xls)$ api.php
+
+</IfModule>

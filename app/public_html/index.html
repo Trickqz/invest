@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>App</title>
+        
+        <!-- Google index -->
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="google" content="nositelinkssearchbox">
+        <meta name="google" value="notranslate" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="referrer" content="origin" />
+        
+        <!-- Cache control -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        
+        <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Application -->
+        <!--<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="apple-mobile-web-app-title" content="#APP_NAME#">
+        <meta name="application-name" content="#APP_NAME#">
+        <meta name="msapplication-TileColor" content="#THEME_COLOR#">
+        <meta name="theme-color" content="#THEME_COLOR#">-->
+        <!--<meta name="google-site-verification" content="rYfamR5Ps3e89WCpJJo9M30vWVtDYe7DJReYKoL57Os" />-->
+        
+        <!-- CSS files -->
+        <!--<link href="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/css/tabler.min.css" rel="stylesheet" />-->
+        <link href="/assets/css/custom-style.css" rel="stylesheet" />
+        <link href="/assets/css/tree.css" rel="stylesheet" />
+        <link href="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/css/tabler-flags.min.css" rel="stylesheet" />
+        <link href="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/css/tabler-payments.min.css" rel="stylesheet" />
+        <link href="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/css/tabler-vendors.min.css" rel="stylesheet" />
+        <link href="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/css/demo.min.css" rel="stylesheet" />
+        
+        <link rel="manifest" id="custom-manifest">
+        
+        <!-- JQuery / TMP -->
+        <script type="text/javascript" src="https://cdn.brauntech.com.br/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        
+        <!-- Velocity.js -->
+        <!--<script src="https://cdn.brauntech.com.br/ajax/libs/velocity/1.5.1/velocity.min.js"></script>
+        <script src="https://cdn.brauntech.com.br/ajax/libs/velocity/1.5.1/velocity.ui.min.js"></script>-->
+        
+        <!-- Scripts -->
+        <script type="text/javascript" src="https://cdn.brauntech.com.br/assets/js/cookie.js"></script>
+        <!--<script type="text/javascript" src="https://cdn.brauntech.com.br/assets/js/object.js"></script>-->
+        <script type="text/javascript" src="https://cdn.brauntech.com.br/ajax/libs/base64/2.1.9/base64.min.js"></script>
+        
+        <script src="/assets/vendor/auth0/jwt-decode.js"></script>
+        
+        <!-- GraphQl -->
+        <script type="text/javascript" src="/assets/js/lib/graphql.min.js"></script>
+        
+        <script type="text/javascript" src="/config/config.ini.js?_v=1.0.37"></script>
+        
+        <!-- WooUI App -->
+        <script type="text/javascript" src="/assets/js/wooui.js?_v=1.0.37"></script>
+        
+        <!-- Modules -->
+        <!--<script type="module" src="/assets/js/mask.js"></script>-->
+        
+        <!-- Neo7i Commerce -->
+        <script type="text/javascript" src="/assets/js/commerce.js?_v=1.0.37"></script>
+        <!--<script type="text/javascript" src="https://app.commerce.brauntech.com.br/assets/js/commerce.js"></script>-->
+        <script type="text/javascript" src="/assets/js/app.js?_v=1.0.37"></script>
+        <script type="text/javascript" src="/assets/js/controller.js?_v=1.0.37"></script>
+        <script type="text/javascript" src="/assets/js/core.js?_v=1.0.37"></script>
+        
+        <script type="text/javascript" src="/assets/js/upload.js?_v=1.0.37"></script>
+        <script type="text/javascript" src="/assets/js/xdr.js?_v=1.0.37"></script>
+        
+        <!-- Navigo -->
+        <script src="https://cdn.brauntech.com.br/ajax/libs/navigo/8.7.1/navigo.js"></script>
+        
+        <!-- Underscore -->
+        <script src="https://cdn.brauntech.com.br/ajax/libs/underscore.js/1.12.0/underscore-min.js"></script>
+        
+        <!-- Various -->
+        <script type="text/javascript" src="https://cdn.brauntech.com.br/assets/js/url.js"></script>
+        <script type="text/javascript" src="https://cdn.brauntech.com.br/assets/js/object.js"></script>
+        
+        <!-- Handlebars -->
+        <script src="https://cdn.brauntech.com.br/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+        
+        <!-- Others Libs -->
+        <!--<script src="/assets/js/lib/highcharts.js" type="text/javascript"></script>-->
+        <script type="text/javascript" src="/assets/js/lib/qrcode.min.js"></script>
+        
+        <!-- Image Crop -->
+        <link  href="https://cdn.brauntech.com.br/ajax/libs/cropperjs/1.5.12/cropper.css" rel="stylesheet">
+        <script src="https://cdn.brauntech.com.br/ajax/libs/cropperjs/1.5.12/cropper.js"></script>
+        
+        <!-- Title Notifier JS file  -->
+        <script src="https://cdn.brauntech.com.br/assets/libs/title-notifier.js/title_notifier.js"></script>
+        
+        <script src="/assets/vendor/Inputmask/inputmask.min.js"></script>
+        
+        <script>
+            Inputmask.extendAliases({
+                'currencyUSD': {
+                    alias: "numeric",
+                    prefix: "USD ",
+                    groupSeparator: ".",
+                    //allowPlus: false,
+                    //allowMinus: false,
+                    digits: 2,
+                    digitsOptional: false,
+                    
+                    radixPoint: ",",
+                    //_radixDance: true,
+                    numericInput: true,
+                    placeholder: "0"
+                },
+                'currencyBRL': {
+                    alias: "numeric",
+                    prefix: "R$ ",
+                    groupSeparator: ".",
+                    //allowPlus: false,
+                    //allowMinus: false,
+                    digits: 2,
+                    digitsOptional: false,
+                    
+                    radixPoint: ",",
+                    //_radixDance: true,
+                    numericInput: true,
+                    placeholder: "0"
+                },
+                'percentage': {
+                    alias: "numeric",
+                    prefix: "",
+                    groupSeparator: ".",
+                    //allowPlus: false,
+                    //allowMinus: false,
+                    digits: 2,
+                    digitsOptional: false,
+                    
+                    radixPoint: ",",
+                    //_radixDance: true,
+                    numericInput: true,
+                    placeholder: "0"
+                },
+                'numeric2': {
+                    alias: "numeric",
+                    prefix: "",
+                    groupSeparator: ".",
+                    //allowPlus: false,
+                    //allowMinus: false,
+                    digits: 2,
+                    digitsOptional: false,
+                    
+                    radixPoint: ",",
+                    //_radixDance: true,
+                    numericInput: true,
+                    placeholder: "0"
+                }
+            });
+        </script>
+        
+        <style>
+            .empty {
+                min-height: 50vh;
+            }
+            .modal-full-width {
+                margin: 16px;
+            }
+            .mb1_25 {
+                margin-bottom: 1.25rem;
+            }
+            .flex-center {
+                justify-content: center;
+            }
+            .btn:focus,
+            .btn-close:focus,
+            .form-control:focus,
+            .form-check-input:focus,
+            .form-select:focus,
+            .input-group-flat:focus-within .form-control,
+            .input-group-flat:focus-within .input-group-text,
+            .input-group-flat:focus-within {
+                box-shadow: unset;
+            }
+            
+            .skeleton-avatar,
+            .skeleton-heading:after,
+            .skeleton-image,
+            .skeleton-line:after {
+                -webkit-animation: unset;
+                animation: unset;
+            }
+        </style>
+        <!--
+            #206bc4 => #df5716
+            #1d60b0 => #cf5014
+        -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    </head>
+    <body class="antialiased /*theme-dark*/">
+        <!-- Libs JS -->
+        <script src="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/libs/nouislider/dist/nouislider.min.js"></script>
+        <script src="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/libs/litepicker/dist/litepicker.js"></script>
+        <script src="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/libs/tom-select/dist/js/tom-select.base.min.js"></script>
+        
+        <!-- Tabler Core -->
+        <script src="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/js/tabler.min.js"></script>
+        <script src="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/dist/js/demo.min.js"></script>
+        
+        
+        <script language="javascript">
+            var qs = urlQueryObj();
+            if (qs['token'] != null && qs['token'] != "") {
+                /**var expires = (new Date(Date.now()+ 86400*1000)).toUTCString();
+                cookieSetJwt('__utmo', qs['token'], expires, CFG__COOKIE_DOMAIN);**/
+                
+                const token = qs['token'];
+                var decoded = jwt_decode(token);
+                
+                if (window.location.href.indexOf("admin.") > -1 || window.location.href.indexOf("admincarbonzero.") > -1) {
+                    cookieSetJwt('__utmo', qs['token'], decoded.exp, CFG__COOKIE_ADMIN_DOMAIN);
+                } else {
+                    cookieSetJwt('__utmo', qs['token'], decoded.exp, CFG__COOKIE_DOMAIN);
+                }
+                
+                //window.location.replace(_appData.settings.store.url + "/?token=" + response.auth__login.authorization.token);
+                window.location.replace("/");
+            }
+            
+            
+            /**
+             * APPDATA
+             */
+            var today = new Date();
+            var lastDayOfMonth = new Date(today.getFullYear(), today.getMonth()+1, 0);
+            
+            var curDay = today.getDate();
+            var curMonth = today.getMonth()+1;
+            var curYear = today.getFullYear();
+            var lastDayOfMonth__day = lastDayOfMonth.getDate();
+            
+            if (curDay < 10) {
+                curDay = '0'+curDay;
+            }
+            if (curMonth < 10) {
+                curMonth = '0'+curMonth;
+            }
+            
+            /** **/
+                const today2 = new Date();
+                today2.setDate(today2.getDate() - 7);
+                
+                var curDaySub7Days = today2.getDate();
+                var curMonthSub7Days = today2.getMonth()+1;
+                var curYearSub7Days = today2.getFullYear();
+                
+                if (curDaySub7Days < 10) {
+                    curDaySub7Days = '0'+curDaySub7Days;
+                }
+                if (curMonthSub7Days < 10) {
+                    curMonthSub7Days = '0'+curMonthSub7Days;
+                }
+            /** **/
+                const today3 = new Date();
+                today3.setDate(today3.getDate() - 15);
+                
+                var curDaySub15Days = today3.getDate();
+                var curMonthSub15Days = today3.getMonth()+1;
+                var curYearSub15Days = today3.getFullYear();
+                
+                if (curDaySub15Days < 10) {
+                    curDaySub15Days = '0'+curDaySub15Days;
+                }
+                if (curMonthSub15Days < 10) {
+                    curMonthSub15Days = '0'+curMonthSub15Days;
+                }
+            /** **/
+            
+            var _appData = {
+                    CFG__API_URL: CFG__API_URL,
+                    settings: null,             // general settings
+                    custom_settings: null,
+                    params: null,               // routers params
+                    data: {                     // api data
+                        //categories: null,
+                        //subcategories: null
+                    },
+                    router: null,               // navigo router data
+                    style: null,                // style
+                    //elements: {
+                    //    menu: null,
+                    //},
+                    system: {
+                        isadmin: false,
+                        isuserinactive: false,
+                        userlogged: false,
+                        userrole: "",
+                        userdata: null,
+                        userdatap: {
+                            profile: {
+                                first_name: ""
+                            },
+                            contact: {
+                                mobile_phone: ""
+                            }
+                        },
+                        firstPurchase: false,
+                        //purchase: {
+                        //    useMinValue: false,
+                        //    minValue: 0,
+                        //    minValueStr: "",
+                        //    pre_shipping: false
+                        //},
+                        wallet: {
+                            ballance: {
+                                value: null,
+                                str: null
+                            }
+                        },
+                        invoices: {
+                            pending_payment: false
+                        },
+                        modules: {
+                            budgets: false,
+                            commissioning_binary: false,
+                            commissioning_unilevel: true,
+                            products: {
+                                stock: false
+                            }
+                        },
+                        curDay: curDay,
+                        curMonth: curMonth,
+                        curYear: curYear,
+                        curDaySub7Days: curDaySub7Days,
+                        curMonthSub7Days: curMonthSub7Days,
+                        curYearSub7Days: curYearSub7Days,
+                        curDaySub15Days: curDaySub15Days,
+                        curMonthSub15Days: curMonthSub15Days,
+                        curYearSub15Days: curYearSub15Days,
+                        lastDayOfMonth: lastDayOfMonth__day
+                    },
+                    tmp : null
+                };
+            
+            $.ajax({
+                type: "GET",
+                url: CFG__API_URL + CFG__API_VERSION + "/settings",
+                data: {},
+                success: function(response){
+                    var _dataObj = response.data;
+                    
+                    _appData.settings = _dataObj;
+                    
+                    fgUserData();
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    var jsonResponse = JSON.parse(XMLHttpRequest.responseText);
+                    
+                    console.log(jsonResponse);
+                    setContent('body', '/modules/errors/maintenance.tpl', null, null, 'wrapper');
+                }
+            });
+            
+            function fgUserData(){
+                $.ajax({
+                    type: "GET",
+                    url: CFG__API_URL + CFG__API_VERSION + "/session/account",
+                    data: {},
+                    beforeSend: function (xhr){ 
+                        xhr.setRequestHeader('Authorization', cookieGet('__utmo'));
+                    },
+                    success: function(response){
+                        var userprofile = response.data;
+                        
+                        _appData.system.userdata = userprofile;
+                        
+                        if (typeof userprofile !== "undefined") {
+                            if (userprofile._status == "active") {
+                                _appData.system.userlogged = true;
+                            }
+                            
+                            // *****************************************************************************************************
+                         /**   if (userprofile.affiliation == 'simple_customer') {
+                                location.href = _appData.settings.store.url;
+                            }
+                            
+                            if (CFG__APP_FISRT_PURCHASE == true && userprofile.affiliation == 'marketing_customer') {
+                                //if (userprofile.network.active_until == undefined || (userprofile.network.active_until== '0001-01-01T00:00:00.000Z' || userprofile.network.active_until == '0001-01-01T00:00:00Z' || userprofile.network.active_until == '0001-01-30T00:00:00Z' || userprofile.network.active_until == '0000-12-31T20:53:32-03:06')) {
+                                if (userprofile.network.status == 'waiting_for_plan' || userprofile.network.status == '') {
+                                    _appData.system.firstPurchase = true;
+                                    //location.href = _appData.settings.store.url + "/primeira-compra";
+                                } else if (userprofile.network.status == 'awaiting_invoice') {
+                                    /**location.href = _appData.settings.store.url;**/
+                         /**       } else if (userprofile.network.status == 'awaiting_payment') {
+                                    if (userprofile.extra__data.plan.registration.enable_access == false) {
+                                        location.href = _appData.settings.store.url;
+                                    }
+                                } 
+                            }*/
+                            // *****************************************************************************************************
+                            
+                         /**   var walletBallance = response.wallet__getBalance;
+                            
+                            _appData.system.wallet.ballance.value = 0;
+                            _appData.system.wallet.ballance.str = 'USD 0,00';
+                            
+                            if (walletBallance != null) {
+                                _appData.system.wallet.ballance.value = walletBallance.available;
+                                _appData.system.wallet.ballance.str = numberToRealHtml(walletBallance.available);
+                            }
+                            
+                            
+                            var fullName = userprofile._name;
+                            //var firstName = fullName.split(' ').slice(0, -1).join(' ');
+                            //var lastName = fullName.split(' ').slice(-1).join(' ');
+                            
+                            var nameArr = fullName.split(' ');
+                            
+                            _appData.system.userdatap.profile.first_name = nameArr[0];
+                            _appData.system.userdatap.contact.mobile_phone = Inputmask.format(userprofile.contact.mobile_phone, { mask: "(99) 99999-9999" });
+                            **/
+                            
+                            if (userprofile._role == "developer" || userprofile._role == "administrator" || userprofile._role == "financial" || userprofile._role == "support") {
+                                _appData.system.isadmin = true;
+                                _appData.system.userrole = userprofile._role;
+                            } else {
+                         /**       _appData.system.isuser = true;
+                                
+                                /* GRADUATION */
+                         /**       let unilevelResume = response.unilevel__getResume;
+                                setTimeout(function(){
+                                    if (document.querySelector(".data--graduation") != null) {
+                                        /**document.querySelector(".data--graduation").style.backgroundImage = "url('https://api.spaces.brauntech.com.br/" + _appData.settings.__spaces_bucket + "/uploads/commerce_files/userapp/images/pins/" + unilevelResume.extra__data.graduation.graduation__seq + ".png')";
+                                        document.querySelector(".data--graduation").title = unilevelResume.extra__data.graduation.name;**/
+                        /**                document.querySelector(".data--graduation").innerHTML = unilevelResume.extra__data.graduation.name;
+                                    }
+                                }, 1000);
+                                
+                                if (userprofile.extra__data != null) {
+                                    if (userprofile.extra__data.plan.mode == "monthly" || userprofile.extra__data.plan.mode == "yearly" || userprofile.extra__data.plan.mode == "period") {
+                                        // active or inactive
+                                        var indexActStatus = newActivationStatus2B(userprofile.network.active_until);
+                                        if (indexActStatus[0] == false) {
+                                            _appData.system.isuserinactive = true;
+                                        }
+                                    }
+                                }**/
+                            }
+                            
+                            if (userprofile.extra__data != null) {
+                                if (userprofile.extra__data.invoices.pending_payment) {
+                                    _appData.system.invoices.pending_payment = true;
+                                }
+                            }
+                            
+                            //fGetSession();
+                            // *****************************************************************************************************
+                            setContent('app', '/modules/main.tpl', null, _appData);
+                            
+                            setTimeout(function(){ f_notificationsGetAll(); }, 500);
+                            setInterval(function(){ /*supportGetAll();*/ f_notificationsGetAll(); }, 15000);
+                            
+                            //settings.office.register.force_address_fill
+                            
+                            //f_notificationsGetAll();
+                        /**    setTimeout(function(){ f_notificationsGetAll(); }, 500);
+                            
+                            if (_appData.settings.office.register.force_address_fill == true) {
+                                if (userprofile.address != null) {
+                                    if (userprofile.address[0].postal_code == "" || userprofile.address[0].state == "" || userprofile.address[0].city == "" || userprofile.address[0].district == "" || userprofile.address[0].street == "" || userprofile.address[0].number == "") {
+                                        setTimeout(function(){
+                                            View.openFormProfileAddressEdit();
+                                        }, 400);
+                                    }
+                                }
+                            }**/
+                        }
+                        
+                        init();
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        var jsonResponse = JSON.parse(XMLHttpRequest.responseText);
+                        
+                        console.log(jsonResponse);
+                        
+                        var userData = JSON.parse(localStorage.getItem('userData'));
+                        if (userData != null) {
+                            _appData.system.userdata = userData;
+                        }
+                        
+                        //fGetSession();
+                        // *****************************************************************************************************
+                        ///setContent('app', '/modules/main.tpl', null, _appData);
+                        
+                        ///init();
+                        
+                        init();
+                    }
+                });
+            }
+            
+            function fgUpdateUserData(){
+                $.ajax({
+                    type: "GET",
+                    url: CFG__API_URL + CFG__API_VERSION + "/session/account",
+                    data: {},
+                    beforeSend: function (xhr){ 
+                        xhr.setRequestHeader('Authorization', cookieGet('__utmo'));
+                    },
+                    success: function(response){
+                        var userprofile = response.data;
+                        _appData.system.userdata = userprofile;
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        var jsonResponse = JSON.parse(XMLHttpRequest.responseText);
+                        console.log(jsonResponse);
+                    }
+                });
+            }
+            
+            /**
+            function fgUpdateUserData(){
+                accountsGetUserData().then(function (response) {
+                    var userprofile = response.accounts__getProfile;
+                    if (userprofile != null) {
+                        _appData.system.userdata = userprofile;
+                        
+                        const nDataFull_name = document.querySelectorAll('.data--full_name');
+                        if (nDataFull_name != null) {
+                            nDataFull_name.forEach(
+                                p => {
+                                    p.innerHTML = userprofile._name;
+                                }
+                            );
+                        }
+                        
+                        const nDataEmail = document.querySelectorAll('.data--email');
+                        if (nDataEmail != null) {
+                            nDataEmail.forEach(
+                                p => {
+                                    p.innerHTML = userprofile._email;
+                                }
+                            );
+                        }
+                        
+                        const nDataProfilePictureSrc = document.querySelectorAll('.data--profile-picture-src');
+                        if (nDataProfilePictureSrc != null) {
+                            nDataProfilePictureSrc.forEach(
+                                p => {
+                                    p.style.backgroundImage = "url('https://api.spaces.brauntech.com.br/"+_appData.settings.__spaces_bucket+"/customers/"+_appData.system.userdata._id+"/profile/picture/"+ _appData.system.userdata.profile.picture.src+"'), url('../assets/img/picker_account.png')";
+                                }
+                            );
+                        }
+                        
+                        /** **/
+            /**            const nDataValidationStatus_message = document.querySelectorAll('.data--validation-status--message');
+                        if (nDataValidationStatus_message != null) {
+                            nDataValidationStatus_message.forEach(
+                                p => {
+                                    if (_appData.system.isuser == true) {
+                                        if (_appData.settings.office.register.use_account_validation) {
+                                            if (_appData.system.userdata.validation.status == "waiting") {
+                                                p.classList.remove('bg-yellow');
+                                                p.classList.add('bg-red');
+                                                p.innerHTML = 'Conta pendente de validação.';
+                                            } else {
+                                                if (_appData.system.userdata.validation.status == "validating") {
+                                                    p.classList.remove('bg-red');
+                                                    p.classList.add('bg-yellow');
+                                                    p.innerHTML = 'Validação da conta em andamento.';
+                                                } else {
+                                                    if (_appData.system.userdata.validation.status == "invalidated") {
+                                                        p.classList.remove('bg-yellow');
+                                                        p.classList.add('bg-red');
+                                                        p.innerHTML = 'Conta não validada.';
+                                                    }/** else {
+                                                        if (_appData.system.userdata.validation.status == "validated") {
+                                                            //Conta validada
+                                                        }
+                                                    }*/
+            /**                                    }
+                                            }
+                                        }
+                                    }
+                                }
+                            );
+                        }
+                        
+                        const nDataValidationStatus_alert = document.querySelectorAll('.data--validation-status--alert');
+                        if (nDataValidationStatus_alert != null) {
+                            nDataValidationStatus_alert.forEach(
+                                p => {
+                                    p.remove();
+                                }
+                            );
+                        }
+                        /** **/
+            /**        }
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            }
+            **/
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            function alertOpen(obj, callback){
+                /*
+                <div class="modal modal-blur fade" id="modal-success" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                        <div class="modal-content" style="border: solid 1px #dbdddf;">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="modal-status bg-success"></div>
+                            <div class="modal-body text-center py-4">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/circle-check -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-green icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M9 12l2 2l4 -4"></path>
+                                </svg>
+                                <h3>{{{params.title}}}</h3>
+                                <div class="text-muted">{{{params.text}}}</div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="w-100">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="#" class="btn btn-white w-100" data-bs-dismiss="modal">
+                                                Go to dashboard
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="javascript:;" class="btn btn-success w-100">
+                                                View invoice
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                */
+                
+                var title = ((typeof(obj.title)!=="undefined"))?obj.title:"",
+                    text = ((typeof(obj.text)!=="undefined"))?obj.text:"",
+                    type = ((typeof(obj.type)!=="undefined"))?obj.content:"success",
+                    //showCancelButton = ((typeof(obj.showCancelButton)!=="undefined"))?obj.showCancelButton:true,
+                    confirmButtonText = ((typeof(obj.confirmButtonText)!=="undefined"))?obj.confirmButtonText:"OK";
+                    cancelButtonText = ((typeof(obj.cancelButtonText)!=="undefined"))?obj.cancelButtonText:"Cancelar";
+                
+                /**if (type == 'success') {
+                    dialogOpen('templates/popup/alert_success.tpl', { title: title, text: text, confirmButtonText: confirmButtonText, cancelButtonText: cancelButtonText, callback: callback }, null);
+                } else {
+                    dialogOpen('templates/popup/alert_danger.tpl', { title: title, text: text, confirmButtonText: confirmButtonText, cancelButtonText: cancelButtonText, callback: callback }, null);
+                }*/
+                
+                
+                var divModal = document.createElement("div");
+                divModal.id = "modal-danger";
+                divModal.className = "modal modal-blur fade";
+                divModal.setAttribute("tabindex", "-1");
+                divModal.setAttribute("role", "dialog");
+                divModal.setAttribute("aria-hidden", "true");
+                
+                var divModalDialog = document.createElement("div");
+                divModalDialog.className = "modal-dialog modal-sm modal-dialog-centered";
+                divModalDialog.setAttribute("role", "document");
+                
+                var divModalContent = document.createElement("div");
+                divModalContent.className = "modal-content";
+                divModalContent.style.cssText = "border: solid 1px #dbdddf;";
+                
+                
+                var closeButton = document.createElement("button");
+                closeButton.type = "button";
+                closeButton.className = "btn-close";
+                closeButton.setAttribute("data-bs-dismiss", "modal");
+                closeButton.setAttribute("aria-label", "Close");
+                //closeButton.innerHTML = confirmButtonText;
+                /*closeButton.addEventListener("click", function() {
+                    dialogClose();
+                    
+                    setTimeout(function() {
+                        if (typeof callback === 'function') {
+                            callback();
+                        }
+                    }, 200);
+                });*/
+                divModalContent.appendChild(closeButton);
+                
+                var divModalStatus = document.createElement("div");
+                divModalStatus.className = "modal-status bg-danger";
+                divModalContent.appendChild(divModalStatus);
+                
+                
+                var divModalBody = document.createElement("div");
+                divModalBody.className = "modal-body text-center py-4";
+                divModalBody.innerHTML = 
+                      '<!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle -->'
+                    + '<svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
+                    + '    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>'
+                    + '    <path d="M12 9v2m0 4v.01"></path>'
+                    + '    <path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75"></path>'
+                    + '</svg>';
+                
+                var divModalBodyH3 = document.createElement("h3");
+                divModalBodyH3.innerHTML = title;
+                
+                var divModalBodyText = document.createElement("div");
+                divModalBodyText.className = "text-muted";
+                divModalBodyText.innerHTML = text;
+                
+                divModalBody.appendChild(divModalBodyH3);
+                divModalBody.appendChild(divModalBodyText);
+                
+                divModalContent.appendChild(closeButton);
+                divModalContent.appendChild(divModalStatus);
+                divModalContent.appendChild(divModalBody);
+                
+                
+                
+                var divModalFooter = document.createElement("div");
+                divModalFooter.className = "modal-footer";
+                var divModalFooterW100 = document.createElement("div");
+                divModalFooterW100.className = "w-100";
+                var divModalFooterW100Row = document.createElement("div");
+                divModalFooterW100Row.className = "row";
+                
+                var divModalFooterW100RowCol1 = document.createElement("div");
+                divModalFooterW100RowCol1.className = "col";
+                
+                var cancelButton = document.createElement("a");
+                cancelButton.href = "#";
+                cancelButton.className = "btn btn-white w-100";
+                cancelButton.setAttribute("data-bs-dismiss", "modal");
+                cancelButton.innerHTML = cancelButtonText;
+                
+                divModalFooterW100RowCol1.appendChild(cancelButton);
+                
+                
+                var divModalFooterW100RowCol2 = document.createElement("div");
+                divModalFooterW100RowCol2.className = "col";
+                
+                var confirmButton = document.createElement("a");
+                confirmButton.href = "javascript:;";
+                confirmButton.className = "btn btn-danger w-100";
+                confirmButton.innerHTML = confirmButtonText;
+                confirmButton.addEventListener("click", function() {
+                    dialogClose();
+                    
+                    setTimeout(function() {
+                        if (typeof callback === 'function') {
+                            callback();
+                        }
+                    }, 200);
+                });
+                divModalFooterW100RowCol2.appendChild(confirmButton);
+                
+                
+                divModalFooterW100Row.appendChild(divModalFooterW100RowCol1);
+                divModalFooterW100Row.appendChild(divModalFooterW100RowCol2);
+                divModalFooterW100.appendChild(divModalFooterW100Row);
+                
+                divModalFooter.appendChild(divModalFooterW100);
+                divModalContent.appendChild(divModalBody);
+                divModalContent.appendChild(divModalFooter);
+                divModalDialog.appendChild(divModalContent);
+                divModal.appendChild(divModalDialog);
+                
+                /** **/
+                var currForm = document.getElementById("modal-danger");
+                if (currForm != null) {
+                    currForm.remove();
+                }
+                /** **/
+                
+                document.querySelector("body").appendChild(divModal);
+                $('#modal-danger').modal('show');
+            }
+            
+            function dialogOpen(__form, __params = null, __data = null) {
+                if (typeof hideFade === 'function') {
+                    hideFade();
+                }
+                
+                xhrpub('/'+__form, function(data) {
+                    /* NEW */
+                    /**1-if (document.querySelectorAll("div.form-center").length < 1) {
+                        var formCenter = document.createElement("div");
+                        formCenter.className = "form-center";
+                        document.body.appendChild(formCenter);
+                    }*/
+                    
+                    
+                    /**var t = document.querySelector('[data-template="'+__form+'"]');
+                    
+                    if (__data != null) {
+                        Handlebars.registerHelper('checked', function (selected, options) {
+                            return options.fn(this).replace(new RegExp(' value=\"' + selected + '\"'), '$& checked=""');
+                        });
+                        Handlebars.registerHelper('selected', function (selected, options) {
+                            return options.fn(this).replace(new RegExp(' value=\"' + selected + '\"'), '$& selected="selected"');
+                        });
+                        
+                        var template = Handlebars.compile(t.innerHTML);
+                        var new_template = document.createElement('template');
+                        new_template.innerHTML = template(__data);
+                        
+                        var clone = document.importNode(new_template.content, true); // where true means deep copy
+                    } else {
+                        // add to document DOM
+                        var clone = document.importNode(t.content, true); // where true means deep copy
+                    }*/
+                    var t = stringToHTML(data);
+                    
+                    ///if (__data != null) {
+                        Handlebars.registerHelper('checked', function (selected, options) {
+                            return options.fn(this).replace(new RegExp(' value=\"' + selected + '\"'), '$& checked=""');
+                        });
+                        Handlebars.registerHelper('selected', function (selected, options) {
+                            return options.fn(this).replace(new RegExp(' value=\"' + selected + '\"'), '$& selected="selected"');
+                        });
+                        Handlebars.registerHelper('formatdate', function(datetime, format) {
+                            var x = new Date(datetime);
+                            var y = format;
+                            
+                            // original function
+                            //formatDate = function date2str(x, y) {
+                                var z = {
+                                    M: x.getMonth() + 1,
+                                    d: x.getDate(),
+                                    h: x.getHours(),
+                                    m: x.getMinutes(),
+                                    s: x.getSeconds()
+                                };
+                                y = y.replace(/(M+|d+|h+|m+|s+)/g, function(v) {
+                                    return ((v.length > 1 ? "0" : "") + eval('z.' + v.slice(-1))).slice(-2)
+                                });
+
+                                return y.replace(/(y+)/g, function(v) {
+                                    return x.getFullYear().toString().slice(-v.length)
+                                });
+                            //}
+                        });
+                        Handlebars.registerHelper('formatdoc', function(doc, type) {
+                            if (type == 'cpf') {
+                                return Inputmask.format(doc, { mask: "999.999.999-99" });
+                            } else if (type == 'cnpj') {
+                                return Inputmask.format(doc, { mask: "99.999.999/9999-99" });
+                            } else {
+                                var val = doc;
+                                var digit = '';
+                                if (val != null) {
+                                    digit = val.replace(/\D/g, '');
+                                }
+                                
+                                if (digit.length == 11) {
+                                    return Inputmask.format(doc, { mask: "999.999.999-99" });
+                                } else if (digit.length == 14) {
+                                    return Inputmask.format(doc, { mask: "99.999.999/9999-99" });
+                                } else {
+                                    return '';
+                                }
+                            }
+                        });
+                        Handlebars.registerHelper('format', function(input, format) {
+                            //return jSuites.mask.run(input, format)
+                            //return Inputmask.format(input, { mask: format });
+                            return "";
+                        });
+                        Handlebars.registerHelper('formatmoney_br', function(input) {
+                            return fmtMoney(input);
+                        });
+                        Handlebars.registerHelper('formatpercentage', function(input) {
+                            return fmtPercentage(input);
+                        });
+                        Handlebars.registerHelper('isdefined', function (value) {
+                            return value !== undefined;
+                        });
+                        Handlebars.registerHelper('contains', function(needle, haystack, options) {
+                           needle = Handlebars.escapeExpression(needle);
+                           haystack = Handlebars.escapeExpression(haystack);
+                           return (haystack.indexOf(needle) > -1) ? options.fn(this) : options.inverse(this);
+                        });
+                        
+                        /**Handlebars.registerHelper('stringifyFunc', function(fn) {
+                            if (fn != null) {
+                                return new Handlebars.SafeString("(" + 
+                                        fn.toString().replace(/\"/g,"'") + ")()");
+                            }
+                        });*/
+                        
+                        
+                        var template = Handlebars.compile(t.innerHTML);
+                        var new_template = document.createElement('template');
+                        
+                        _appData['tmp'] = __data;
+                        new_template.innerHTML = template(_appData);
+                        _appData['tmp'] = null;
+                        
+                        var clone = document.importNode(new_template.content, true); // where true means deep copy
+                    ///} else {
+                    ///    // add to document DOM
+                    ///    var clone = document.importNode(t.content, true); // where true means deep copy
+                    ///}
+                    
+                    
+                    //var body = document.querySelector("body");
+                    ///1-var formCenter = document.querySelector(".form-center");
+                    ///1-var formList = document.querySelectorAll(".dialog");
+                    //var form = document.getElementById("dialog");
+                    
+                    /**1-if (formList.length > 0) {
+                        formList[formList.length-1].classList.add("disabled");
+                    }*/
+                    
+                    //
+                    //<div class="modal modal-blur fade" id="modal-feedback" tabindex="-1" role="dialog" aria-hidden="true">
+                    //
+                    var form = document.createElement("div");
+                    //form.id = "dialog";
+                    var __formId = __form.replace("templates/", "");
+                        __formId = __formId.replace("popup/", "");
+                        __formId = __formId.replace(".tpl", "");
+                    if (__form == "templates/popup/viewer_pdf.tpl" || __form == "templates/popup/viewer_image.tpl") {
+                        ///1-form.className = "dialog full";
+                        form.className = "modal modal-blur fade full";
+                        __params["title"] = __params.title;
+                    } else {
+                        //1-form.className = "dialog";
+                        form.className = "modal modal-blur fade";
+                    }
+                    form.id = "modal-"+__formId;
+                    form.setAttribute('tabindex', "-1");
+                    form.setAttribute('role', "dialog");
+                    form.setAttribute('aria-hidden', "true");
+                    form.setAttribute('data-src', JSON.stringify(__params));
+                    
+                    //var formContent = document.createElement("div");
+                    //formContent.className = "od-formContent";
+                    //formContent.innerHTML = ((typeof(content)!=="undefined"))?content:"No content.";
+                    //formBox.appendChild(formContent);
+                    form.appendChild(clone);
+                    
+                    /** **/
+                    //console.log(Inputmask.format("1157381", { alias: "currencyUSD" }));
+                    Inputmask().mask(form.querySelectorAll("input"));
+                    /** **/
+                    
+                    runScripts(form);
+                    
+                    
+                    
+                    
+                    
+                    ///document.getElementById('dialog').innerHTML = '';
+                    ///document.getElementById('dialog').appendChild(clone);
+                    ///1-document.getElementsByClassName("form-center")[0].appendChild(form);
+                    
+                    var currForm = document.getElementById("modal-"+__formId);
+                    if (currForm != null) {
+                        currForm.remove();
+                    }
+                    
+                    /** **/
+                    var formList = document.querySelectorAll(".modal");
+                    if (formList.length > 0) {
+                        for (i = 0; i < formList.length; i++){
+                            if (formList[i].style.display == "none") {
+                                formList[i].remove();
+                            }
+                        }
+                    }
+                    /** **/
+                    
+                    document.querySelector("body").appendChild(form);
+                    
+                    
+                    
+                    ///1-document.body.classList.add("open");  //"noscroll");
+                    ///1-formCenter.style.top = "0";
+                    //formCenter.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+                    /**if (height != null) {
+                        form.style.height = height;
+                    }**/
+                    
+                    /**
+                    const vWidth  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                    const vHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                    var g = parseInt(maxWidth);
+                    
+                    if (vWidth <= 940) {
+                        if (g >= 600 || maxWidth.includes("%")) {
+                            maxWidth = "90%";
+                        }
+                    }
+                    form.style.maxWidth = maxWidth;
+                    **/
+                    
+                    
+                    /** **/
+                    /**
+                    //const vWidth  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                    const vHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                    //var g = parseInt(maxWidth);
+                    
+                    //if (vWidth <= 940) {
+                    //    if (g >= 600 || maxWidth.includes("%")) {
+                    //        maxWidth = "90%";
+                    //    }
+                    //}
+                    //form.style.maxWidth = maxWidth;
+                    
+                    //offsetHeight, clientHeight
+                    form.style.top = parseInt((vHeight - form.offsetHeight) / 2) + 'px';
+                    **/
+                    
+                    //form.style.top = "50%";
+                    
+                    /*
+                    var observer = new MutationObserver(function() {
+                       console.log("You changed the style") 
+                    });
+                    observer.observe(form, { attributeFilter: ['style'] });*/
+                    
+                    /**var observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutationRecord) {
+                            console.log('style changed!', mutationRecord.attributeName, mutationRecord.type);
+                            
+                            var style = window.getComputedStyle(form);
+                            console.log("new height: ", style.getPropertyValue("height"));
+                        });
+                    });
+                    observer.observe(form, { attributes : true, attributeFilter : ['style'] });*/
+                    
+                    //window.onresize = function(){ console.log('resize'); };
+                    
+                    
+                    
+                    /** **/
+                    
+                    
+                    /**
+                     * EVENTS
+                     */
+                    /**1-var __forms = form.querySelectorAll("form");
+                    __forms.forEach(form => {
+                        form.addEventListener("keydown", function(e){
+                            e.target.classList.remove("error");
+                            e.target.parentElement.classList.remove("error");
+                            
+                            /*var sections = document.querySelectorAll('.visible');
+                            for (i = 0; i < sections.length; i++){
+                                sections[i].classList.remove('visible');
+                            }*/
+                    /**1-    });
+                    });*/
+                    
+                    /**1-var inputs__form = document.querySelectorAll("input, select, textarea");
+                    inputs__form.forEach(input => {
+                        input.addEventListener(
+                            "invalid",
+                            event => {
+                                input.classList.add("error");
+                            },
+                            false
+                        );
+                        input.addEventListener(
+                            "valid",
+                            event => {
+                                input.classList.remove("error");
+                            },
+                            false
+                        );
+                        input.addEventListener(
+                            "blur",
+                            function() {
+                                input.checkValidity();
+                            }
+                        );
+                    });*/
+                    
+                    
+                    /**1-if (CFG__ENABLE_ANIMATION) {
+                        formCenter.style.display = "flex";
+                        
+                        Velocity(form, "transition.slideUpIn", 300);
+                        /**Velocity(form, {top: "50%"}, 70);**/
+                    /**1-} else {
+                        formCenter.style.display = "flex";
+                        form.style.display = "flex";
+                    }*/
+                    
+                    $('#modal-'+__formId).modal('show');
+                });
+            }
+            
+            
+            /**
+             * NEW
+             */
+            function OpenFile(file, contentType) {
+                var fileUrl = CFG__API_URL+'/'+_appData.settings.__spaces_bucket+file;
+                
+                if (contentType.includes("image")) {
+                    dialogOpen('templates/popup/viewer_image.tpl', { title: GetFilename(fileUrl), file: fileUrl });
+                } else if (contentType.includes("pdf")) {
+                        dialogOpen('templates/popup/viewer_pdf.tpl', { title: GetFilename(fileUrl), file: fileUrl });
+                    }
+                //    } else if (contentType.includes("text")) {
+                //        App.form('viewer__code', null, '95%', { file: fileUrl });
+                //    }
+            }
+
+            function OpenFileReport(url, __title) {
+                //dialogOpen('viewer__pdf', null, '95%', { file: url });
+                dialogOpen('templates/popup/viewer_pdf.tpl', { title: __title, file: url });
+            }
+            
+            
+            /**function dialogClose() {
+                var body = document.querySelector("body");
+                var formCenter = document.querySelector(".form-center");
+                var formList = document.querySelectorAll(".dialog");
+                
+                if (formList.length > 0) {
+                    if (!formList[formList.length-1].querySelector(".title .close")) {
+                        return;
+                    }
+                    
+                    if (CFG__ENABLE_ANIMATION) {
+                        Velocity(formList[formList.length-1], "transition.slideDownOut", 300);
+                        setTimeout(function(){ formList[formList.length-1].parentNode.removeChild(formList[formList.length-1]); }, 100);
+                        
+                        if (formList.length == 1) {
+                            setTimeout(function(){
+                                    //formCenter.style.display = "none";
+                                    formCenter.parentNode.removeChild(formCenter);
+                                },
+                            180);
+                        }
+                    } else {
+                        //formCenter.style.display = "none";
+                        formList[formList.length-1].style.display = "none";
+                        setTimeout(function(){ formList[formList.length-1].parentNode.removeChild(formList[formList.length-1]); }, 100);
+                        
+                        if (formList.length == 1) {
+                            formCenter.parentNode.removeChild(formCenter);
+                        }
+                    }
+                    
+                    if ((formList.length-1) > 0) {
+                        formList[formList.length-2].classList.remove("disabled");
+                    }
+                    
+                    if (formList.length == 1) {
+                        setTimeout(function(){ body.classList.remove("open"); }, 400);
+                    }
+                }
+            }*/
+            
+            
+            
+            
+            ///userGetProfile();
+            //supportGetAll();
+            ///f_notificationsGetAll();
+            //setInterval(function(){ /*supportGetAll();*/ f_notificationsGetAll(); }, 15000);
+            
+            
+            
+            
+            var App = new WooUI();
+            //var attachFastClick = Origami.fastclick;
+            //attachFastClick(document.body);
+            /**document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);**/
+            
+            
+            // Close dialog and print
+            document.addEventListener('keydown', function(event) {
+                event = event || window.event;
+                var isEscape = false;
+                
+                // Close dialog
+                if ("key" in event) {
+                    isEscape = (event.key == "Escape" || event.key == "Esc");
+                } else {
+                    isEscape = (event.keyCode == 27);
+                }
+                if (isEscape) {
+                    dialogClose();
+                }
+                
+                
+                // Print
+                if (event.keyCode === 80 && (event.ctrlKey || event.metaKey) && !event.altKey && (!event.shiftKey || window.chrome || window.opera)) {
+                    event.preventDefault();
+                    if (event.stopImmediatePropagation) {
+                        event.stopImmediatePropagation();
+                    } else {
+                        event.stopPropagation();
+                    }
+                    
+                    var elPrint = document.getElementById('printf');
+                    if (elPrint != null) {
+                        document.getElementById('printf').contentWindow.print();
+                    }
+                    return;
+                }
+            }, true);
+            
+            
+            if (CFG__APP_PWA_MODE == true) {
+                // Register service worker to control making site work offline
+                /*if ('serviceWorker' in navigator) {
+                  navigator.serviceWorker
+                    .register('/pwa-examples/a2hs/sw.js')
+                    .then(() => { console.log('Service Worker Registered'); });
+                }*/
+                
+                /**
+                if ("serviceWorker" in navigator) {
+                    window.addEventListener("load", function() {
+                        navigator.serviceWorker
+                            .register("/serviceWorker.js")
+                            .then(res => console.log("service worker registered"))
+                            .catch(err => console.log("service worker not registered", err));
+                    });
+                }
+                */
+                
+                // Code to handle install prompt on desktop
+                /*let deferredPrompt;
+                const addBtn = document.querySelector('.add-button');
+                addBtn.style.display = 'none';
+
+                window.addEventListener('beforeinstallprompt', (e) => {
+                  // Prevent Chrome 67 and earlier from automatically showing the prompt
+                  e.preventDefault();
+                  // Stash the event so it can be triggered later.
+                  deferredPrompt = e;
+                  // Update UI to notify the user they can add to home screen
+                  addBtn.style.display = 'block';
+
+                  addBtn.addEventListener('click', () => {
+                    // hide our user interface that shows our A2HS button
+                    addBtn.style.display = 'none';
+                    // Show the prompt
+                    deferredPrompt.prompt();
+                    // Wait for the user to respond to the prompt
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                      if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the A2HS prompt');
+                      } else {
+                        console.log('User dismissed the A2HS prompt');
+                      }
+                      deferredPrompt = null;
+                    });
+                  });
+                });*/
+            }
+        </script>
+        
+        
+        <!-- Neo7i Wave -->
+        <!--<link rel="stylesheet" href="https://wave.brauntech.com.br/chatt/dist/style.css">
+        <script type="text/javascript" src="https://wave.brauntech.com.br/chatt/dist/script.js"></script>-->
+        
+        <!-- Google Analytics -->
+        <!--<script type="text/javascript" src="/assets/js/ga.js"></script>-->
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109310876-1"></script>-->
+        <script>
+            /**
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-109310876-1');
+            */
+            
+            //# sourceURL=index.html
+        </script>
+        
+        
+        <script>
+            let newWorker;
+            function showUpdateBar() {
+                titlenotifier.add();
+                
+                /**let snackbar = document.getElementById('snackbar');
+                snackbar.className = 'show';*/
+            }
+            
+            // The click event on the pop up notification
+            /*document.getElementById('reload').addEventListener('click', function() {
+                newWorker.postMessage({
+                    action: 'skipWaiting'
+                });
+            });*/
+            
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js').then(reg => {
+                    reg.addEventListener('updatefound', () => {
+                        // A wild service worker has appeared in reg.installing!
+                        newWorker = reg.installing;
+                        
+                        newWorker.addEventListener('statechange', () => {
+                            // Has network.state changed?
+                            switch (newWorker.state) {
+                                case 'installed':
+                                    if (navigator.serviceWorker.controller) {
+                                        // new update available
+                                        showUpdateBar();
+                                        
+                                        setTimeout(function(){
+                                            newWorker.postMessage({
+                                                action: 'skipWaiting'
+                                            });
+                                        }, 1000);
+                                    }
+                                    // No update available
+                                break;
+                            }
+                        });
+                    });
+                });
+                
+                let refreshing;
+                navigator.serviceWorker.addEventListener('controllerchange', function() {
+                    if (refreshing) return;
+                    window.location.reload();
+                    refreshing = true;
+                });
+            }
+            
+            //App.alert('Atenção', "Teste de msg.", null);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+[29-Apr-2020 18:14:43 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://blockchain.info/tx/7ebf6b8eaccd6d7b2d74c7dc3e53c3e244e827b8cff7e07ca5a8f402bee064d7?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[04-May-2020 13:18:36 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://blockchain.com/btc/tx/6776f08c2d65df13e80f5587844e1bd26a3b07d034995fbf76459f3d2985d68b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[04-May-2020 13:19:06 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https6776f08c2d65df13e80f5587844e1bd26a3b07d034995fbf76459f3d2985d68b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[04-May-2020 13:20:31 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://blockchain.com/btc/tx/6776f08c2d65df13e80f5587844e1bd26a3b07d034995fbf76459f3d2985d68b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-May-2020 21:27:25 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/4207c18fdf229ddf9a497142187dccc76ce85ff279d930547a1b7445daf561cf?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[12-May-2020 12:47:15 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://blockchain.com/btc/tx/a146dc5f8f5e07bb9070481e1bb49de93873bdce21c56ef917bda3b26806b0f2?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[13-May-2020 01:09:46 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://www.blockchain.com/btc/tx/e8ded07e1e3b706660e4120e93b456e5611678911734e7925c1ab42aa6f4e36b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[13-May-2020 01:11:09 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://www.blockchain.com/btc/tx/a146dc5f8f5e07bb9070481e1bb49de93873bdce21c56ef917bda3b26806b0f2?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[13-May-2020 01:17:45 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://www.blockchain.com/btc/tx/e8ded07e1e3b706660e4120e93b456e5611678911734e7925c1ab42aa6f4e36b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[16-May-2020 15:54:54 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/38bb97490db23bcb159b250991c203069d33a02c86dbb0f08ee0831eee5078b8?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[16-May-2020 15:55:15 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/38bb97490db23bcb159b250991c203069d33a02c86dbb0f08ee0831eee5078b8?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[16-May-2020 15:58:14 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/38bb97490db23bcb159b250991c203069d33a02c86dbb0f08ee0831eee5078b8?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[17-May-2020 17:59:14 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/1b67c69c7e4ea5a699c50210fada06c57700a59b32002341ef768fbbe4c61616?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[17-May-2020 17:59:21 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/1b67c69c7e4ea5a699c50210fada06c57700a59b32002341ef768fbbe4c61616?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 02:13:20 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://www.blockchain.com/btc/tx/83fbc64591ad826459471239ae2b314322ee775710803aa3e3fd428e4c55141d?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 02:41:33 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/83fbc64591ad826459471239ae2b314322ee775710803aa3e3fd428e4c55141d?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 02:42:03 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/83fbc64591ad826459471239ae2b314322ee775710803aa3e3fd428e4c55141d?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 02:42:18 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/83fbc64591ad826459471239ae2b314322ee775710803aa3e3fd428e4c55141d?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 02:47:15 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/83fbc64591ad826459471239ae2b314322ee775710803aa3e3fd428e4c55141d?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 02:48:13 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/83fbc64591ad826459471239ae2b314322ee775710803aa3e3fd428e4c55141d?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 02:59:20 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/83fbc64591ad826459471239ae2b314322ee775710803aa3e3fd428e4c55141d?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 20:35:46 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/50975f3ffc6453a2ae1413e11b2e04d77803af39970f8f3543c34489b098ed0f?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 20:38:15 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/50975f3ffc6453a2ae1413e11b2e04d77803af39970f8f3543c34489b098ed0f?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-May-2020 21:42:48 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/50975f3ffc6453a2ae1413e11b2e04d77803af39970f8f3543c34489b098ed0f?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[28-May-2020 23:45:39 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/a672f8a7be84edba9c08ce2e3c8b1e08bc6a9660374ccfbf2d990fdc120161e0?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[03-Jun-2020 19:33:59 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/eb8e762aa1359506f8eb53addc9a0677bea8d9901dfdd604427cf086e4d55bbd?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[03-Jun-2020 19:52:15 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/eb8e762aa1359506f8eb53addc9a0677bea8d9901dfdd604427cf086e4d55bbd?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[13-Jun-2020 15:36:54 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/dfed4b0d43337d8e0897acb04af2902ab60ad3c83c9ba09aa73771803f909a23?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[13-Jun-2020 15:37:44 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/dfed4b0d43337d8e0897acb04af2902ab60ad3c83c9ba09aa73771803f909a23?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[13-Jun-2020 15:38:16 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/dfed4b0d43337d8e0897acb04af2902ab60ad3c83c9ba09aa73771803f909a23?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[13-Jun-2020 15:38:24 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/dfed4b0d43337d8e0897acb04af2902ab60ad3c83c9ba09aa73771803f909a23?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[13-Jun-2020 15:38:42 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/dfed4b0d43337d8e0897acb04af2902ab60ad3c83c9ba09aa73771803f909a23?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[16-Jun-2020 02:59:41 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/bc7fdf61acf25505feb96465cdd879b7aa011798f663c90ff91515f7a4d8d34b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[29-Jun-2020 20:53:53 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/2709dcdddae3b69442112a49c400fc7b8bd9b8bbb84059db75d1ec3b1191795e?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[30-Jun-2020 01:56:04 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/9986a38454ae87585e35ec80e1459383da5f94bfb1feb2ff3847e4b199675111?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[30-Jun-2020 01:57:40 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/9986a38454ae87585e35ec80e1459383da5f94bfb1feb2ff3847e4b199675111?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 06:45:04 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/10?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 06:47:12 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/10?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 06:48:19 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/10?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 06:50:44 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/10?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 06:55:00 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.00102574?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 06:59:20 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.00102641?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 06:59:43 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.00102641?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 07:30:49 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.00102641?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 07:30:55 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.00102641?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 08:23:09 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.00102289?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 10:22:01 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.0012408?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 10:22:52 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.00100000?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[06-Jul-2020 10:23:02 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/0.00100000?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[10-Jul-2020 18:06:33 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/82723acfedb7f775783f4cc25197e3ace1f4867ec0aa255542f5996dc95cad07?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[10-Jul-2020 18:14:21 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/82723acfedb7f775783f4cc25197e3ace1f4867ec0aa255542f5996dc95cad07?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[11-Jul-2020 01:53:20 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/1f1a7be7ef1cec105ec68f3f1804ce4e7e0bd5885f46c5087de3a7d6d1f34615?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[11-Jul-2020 01:57:05 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/1f1a7be7ef1cec105ec68f3f1804ce4e7e0bd5885f46c5087de3a7d6d1f34615?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[11-Jul-2020 18:40:41 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/183751f56d553a7486755ec5405760b23ab14634c0e003e1c7b21fdfd1a46718?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[11-Jul-2020 18:44:12 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/183751f56d553a7486755ec5405760b23ab14634c0e003e1c7b21fdfd1a46718?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[11-Jul-2020 18:51:36 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/183751f56d553a7486755ec5405760b23ab14634c0e003e1c7b21fdfd1a46718?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[18-Jul-2020 02:59:13 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/b73160287bb190f41731be8ce72368dd5abbe95ffebf38de2154ae20ce245e2c?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[18-Jul-2020 22:07:03 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://www.blockchain.com/pt/btc/address/1QN3QqfGvjS7RwG4wWSPtTt4Q1UgNBUgR?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-Jul-2020 21:53:11 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/8ed95598210ca5a6a20f9550028ac63b0cf620506ef1be14b171808e2858b31b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-Jul-2020 21:55:10 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/8ed95598210ca5a6a20f9550028ac63b0cf620506ef1be14b171808e2858b31b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-Jul-2020 21:55:41 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/8ed95598210ca5a6a20f9550028ac63b0cf620506ef1be14b171808e2858b31b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-Jul-2020 21:56:59 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/8ed95598210ca5a6a20f9550028ac63b0cf620506ef1be14b171808e2858b31b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-Jul-2020 21:57:02 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/8ed95598210ca5a6a20f9550028ac63b0cf620506ef1be14b171808e2858b31b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[19-Jul-2020 21:57:26 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/8ed95598210ca5a6a20f9550028ac63b0cf620506ef1be14b171808e2858b31b?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[21-Jul-2020 22:46:52 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://www.blockchain.com/pt/btc/tx/6560f7d97e06735f68ee9d3503f14297ab9b01d092a0c9bd1add0d2552fc2165?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[21-Jul-2020 22:47:34 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/6560f7d97e06735f68ee9d3503f14297ab9b01d092a0c9bd1add0d2552fc2165?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[21-Jul-2020 22:50:24 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/6560f7d97e06735f68ee9d3503f14297ab9b01d092a0c9bd1add0d2552fc2165?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[26-Jul-2020 20:37:20 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/583a884c4583a884c4de198523cae525f0105a0541cb63b0f1bd32b09679adae54abc1dc0de198523cae525f0105a0541cb63b0f1bd32b09679adae54abc1dc0?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[27-Jul-2020 01:50:32 UTC] PHP Warning:  file_get_contents(https://...@gmail.com?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
+[29-Jul-2020 00:19:21 UTC] PHP Warning:  file_get_contents(https://api.blockcypher.com/v1/btc/main/txs/https://www.blockchain.com/pt/btc/tx/96706942fd108648daa220a917d3be21b69710f49e09baf4ad16ddd4238fd4e7?limit=50&amp;includeHex=true): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/conquestmoney/public_html/app/api/btc.php on line 41
