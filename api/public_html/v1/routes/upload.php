@@ -7,7 +7,7 @@
         }*/
         
         /** **/
-        $scandir = str_replace("/v1/routes", "", dirname(__FILE__)) . '/d/uploads/'.$subdir;
+        $scandir = str_replace("/v1/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/d/uploads/'.$subdir;
         $scan = function ($dir, $subdir) use ($scandir, &$scan) {
             $files = [];
 
@@ -39,7 +39,7 @@
                     } else {
                         // It is a file
                         $fi = new finfo(FILEINFO_MIME_TYPE); 
-                        $mime_type = $fi->file(str_replace("/v1/routes", "", dirname(__FILE__)) . '/d/uploads/'.$subdir.'/'.$f); 
+                        $mime_type = $fi->file(str_replace("/v1/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/d/uploads/'.$subdir.'/'.$f); 
                         
                         /*if ($_GET['path'] != "") {
                             $files[] = [
@@ -81,7 +81,7 @@
     });*/
     
     $router->map('POST', '/v1/uploads/[*:path]', function($path){
-        $dir = str_replace("/v1/routes", "", dirname(__FILE__)) . '/d/uploads/'.$path;
+        $dir = str_replace("/v1/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/d/uploads/'.$path;
         
         /*$filename = $_FILES['files']['name'];
         unlink("$dir/$filename");
@@ -164,7 +164,7 @@
     });
     
     $router->map('DELETE', '/v1/uploads/[*:file]', function($file){
-        $dir = str_replace("/v1/routes", "", dirname(__FILE__)) . '/d/uploads/'.urldecode($file);
+        $dir = str_replace("/v1/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/d/uploads/'.urldecode($file);
         unlink("$dir");
         
         //header("Access-Control-Allow-Origin: http://localhost/REST API AUTHENTICATION/");

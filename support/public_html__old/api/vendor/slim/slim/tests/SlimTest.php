@@ -616,7 +616,7 @@ class SlimTest extends PHPUnit_Framework_TestCase
      */
     public function testViewGetsTemplatesPath()
     {
-        $path = dirname(__FILE__) . '/templates';
+        $path = str_replace('\\',  '/', dirname(__FILE__)) . '/templates';
         $s = new \Slim\Slim(array('templates.path' => $path));
         $this->assertEquals($s->view->getTemplatesDirectory(), $path);
     }
@@ -626,7 +626,7 @@ class SlimTest extends PHPUnit_Framework_TestCase
      */
     public function testRenderTemplateWithData()
     {
-        $s = new \Slim\Slim(array('templates.path' => dirname(__FILE__) . '/templates'));
+        $s = new \Slim\Slim(array('templates.path' => str_replace('\\',  '/', dirname(__FILE__)) . '/templates'));
         $s->get('/bar', function () use ($s) {
             $s->render('test.php', array('foo' => 'bar'));
         });
@@ -641,7 +641,7 @@ class SlimTest extends PHPUnit_Framework_TestCase
      */
     public function testRenderTemplateWithDataAndStatus()
     {
-        $s = new \Slim\Slim(array('templates.path' => dirname(__FILE__) . '/templates'));
+        $s = new \Slim\Slim(array('templates.path' => str_replace('\\',  '/', dirname(__FILE__)) . '/templates'));
         $s->get('/bar', function () use ($s) {
             $s->render('test.php', array('foo' => 'bar'), 500);
         });
@@ -947,7 +947,7 @@ class SlimTest extends PHPUnit_Framework_TestCase
      */
     public function testGetRoot()
     {
-        $_SERVER['DOCUMENT_ROOT'] = dirname(__FILE__); //<-- No trailing slash
+        $_SERVER['DOCUMENT_ROOT'] = str_replace('\\',  '/', dirname(__FILE__)); //<-- No trailing slash
         $s = new \Slim\Slim();
         $this->assertEquals($_SERVER['DOCUMENT_ROOT'] . '/foo/', $s->root()); //<-- Appends physical app path with trailing slash
     }

@@ -4,7 +4,7 @@
     error_reporting(E_ALL);
     
     
-    require_once(str_replace("/commands", "", dirname(__FILE__)) . '/dao/conn.php');
+    require_once(str_replace("/commands", "", str_replace('\\',  '/', dirname(__FILE__))) . '/dao/conn.php');
     
     $accounts = (new Accounts)->find(null, null, '', 99999);
     foreach ($accounts as $row) {

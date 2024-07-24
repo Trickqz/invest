@@ -124,7 +124,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
 
         $prop2 = new \ReflectionProperty($view, 'templatesDirectory');
         $prop2->setAccessible(true);
-        $prop2->setValue($view, dirname(__FILE__) . '/templates');
+        $prop2->setValue($view, str_replace('\\',  '/', dirname(__FILE__)) . '/templates');
 
         $output = $view->fetch('test.php', array('foo' => 'baz'));
         $this->assertEquals('test output baz', $output);
@@ -179,7 +179,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
 
         $prop2 = new \ReflectionProperty($view, 'templatesDirectory');
         $prop2->setAccessible(true);
-        $prop2->setValue($view, dirname(__FILE__) . '/templates');
+        $prop2->setValue($view, str_replace('\\',  '/', dirname(__FILE__)) . '/templates');
 
         $view->display('test.php');
     }
@@ -192,7 +192,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
 
         $prop2 = new \ReflectionProperty($view, 'templatesDirectory');
         $prop2->setAccessible(true);
-        $prop2->setValue($view, dirname(__FILE__) . '/templates');
+        $prop2->setValue($view, str_replace('\\',  '/', dirname(__FILE__)) . '/templates');
 
         $view->display('foo.php');
     }

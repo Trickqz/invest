@@ -81,7 +81,7 @@ Plain old PHP:
 ```php
 <?php
 
-    include_once(dirname(__FILE__) . '/mysqldump-php-2.0.0/src/Ifsnop/Mysqldump/Mysqldump.php');
+    include_once(str_replace('\\',  '/', dirname(__FILE__)) . '/mysqldump-php-2.0.0/src/Ifsnop/Mysqldump/Mysqldump.php');
     $dump = new Ifsnop\Mysqldump\Mysqldump('mysql:host=localhost;dbname=testdb', 'username', 'password');
     $dump->start('storage/work/dump.sql');
 ```

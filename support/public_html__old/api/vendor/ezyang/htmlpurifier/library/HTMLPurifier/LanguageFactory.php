@@ -32,7 +32,7 @@ class HTMLPurifier_LanguageFactory
     protected $validator;
 
     /**
-     * Cached copy of dirname(__FILE__), directory of current file without
+     * Cached copy of str_replace('\\',  '/', dirname(__FILE__)), directory of current file without
      * trailing slash.
      * @type string
      */

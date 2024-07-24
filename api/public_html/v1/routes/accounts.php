@@ -322,7 +322,7 @@
         }
     });
     $router->map('DELETE', '/v1/accounts/[i:id]', function($id){
-        $uploadPathFile = str_replace("/api/v1/routes", "", dirname(__FILE__)) . '/uploads/accounts/img';
+        $uploadPathFile = str_replace("/api/v1/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/uploads/accounts/img';
         
         unlink("$uploadPathFile/".$id);
         
@@ -424,7 +424,7 @@ $router->map('GET', '/v1/session/account', function () {
         $id = $data['_id'];
         
         $_files_filename = $_FILES['_files']['name'];
-        $uploadPathFile = str_replace("/api/v1/routes", "", dirname(__FILE__)) . '/uploads/accounts/img';
+        $uploadPathFile = str_replace("/api/v1/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/uploads/accounts/img';
         
         unlink("$uploadPathFile/$id.jpg");
         move_uploaded_file($_FILES['_files']['tmp_name'], "$uploadPathFile/$id.jpg");

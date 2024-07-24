@@ -57,7 +57,7 @@
     });
     
     $router->map('DELETE', '/v1/users/[i:id]', function($id){
-        $uploadPathFile = str_replace("/api/v1/routes", "", dirname(__FILE__)) . '/uploads/accounts/img';
+        $uploadPathFile = str_replace("/api/v1/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/uploads/accounts/img';
         
         unlink("$uploadPathFile/".$id);
         

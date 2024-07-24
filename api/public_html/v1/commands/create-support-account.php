@@ -3,7 +3,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     
-    $ini = parse_ini_file(str_replace("/commands", "", dirname(__FILE__)) . '/config/config.ini.php');
+    $ini = parse_ini_file(str_replace("/commands", "", str_replace('\\',  '/', dirname(__FILE__))) . '/config/config.ini.php');
 
     define('OPENSUPPORTS_ENABLED',    $ini['OPENSUPPORTS_ENABLED']);
     define('OPENSUPPORTS_API_URL',    $ini['OPENSUPPORTS_API_URL']);

@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require str_replace("/class", "", dirname(__FILE__)) . '/vendor/PHPMailer/src/Exception.php';
-require str_replace("/class", "", dirname(__FILE__)) . '/vendor/PHPMailer/src/PHPMailer.php';
-require str_replace("/class", "", dirname(__FILE__)) . '/vendor/PHPMailer/src/SMTP.php';
+require str_replace("/class", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/PHPMailer/src/Exception.php';
+require str_replace("/class", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/PHPMailer/src/PHPMailer.php';
+require str_replace("/class", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/PHPMailer/src/SMTP.php';
 
 class Mailer
 {

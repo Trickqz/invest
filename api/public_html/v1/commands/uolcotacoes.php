@@ -5,7 +5,7 @@
     error_reporting(E_ALL);
     
     
-    require_once(str_replace("/commands", "", dirname(__FILE__)) . '/dao/conn.php');
+    require_once(str_replace("/commands", "", str_replace('\\',  '/', dirname(__FILE__))) . '/dao/conn.php');
     
     if(!$fp=fopen("http://economia.uol.com.br/cotacoes/" ,"r" )) { 
         echo "Erro ao abrir a página de cotação";     

@@ -4,7 +4,7 @@
     error_reporting(E_ALL);
     
     
-    require_once(str_replace("/commands", "", dirname(__FILE__)) . '/dao/conn.php');
+    require_once(str_replace("/commands", "", str_replace('\\',  '/', dirname(__FILE__))) . '/dao/conn.php');
     
     $ch = curl_init("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='".date("m")."-".date("d")."-".date("Y")."'&format=json");
     //$ch = curl_init("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='04-19-2022'&format=json");

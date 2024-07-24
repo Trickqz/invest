@@ -43,7 +43,7 @@ function Error($txt)
 
 function LoadMap($enc)
 {
-	$file = dirname(__FILE__).'/'.strtolower($enc).'.map';
+	$file = str_replace('\\',  '/', dirname(__FILE__)).'/'.strtolower($enc).'.map';
 	$a = file($file);
 	if(empty($a))
 		Error('Encoding not found: '.$enc);

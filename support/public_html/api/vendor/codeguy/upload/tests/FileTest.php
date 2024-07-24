@@ -11,7 +11,7 @@ class FileTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->assetsDirectory = dirname(__FILE__) . '/assets';
+        $this->assetsDirectory = str_replace('\\',  '/', dirname(__FILE__)) . '/assets';
         $_FILES['foo'] = array(
             'name' => 'foo.txt',
             'tmp_name' => $this->assetsDirectory . '/foo.txt',

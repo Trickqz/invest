@@ -88,7 +88,7 @@
         $bytes = openssl_random_pseudo_bytes(32);
         $hash = base64_encode($bytes);
         //$charge->setRedirectUrl('https://api.unityglobal.club/v1/wallet/coinbase/'.$hash.'/event');  //{https://your.site.com}
-        $charge->setRedirectUrl('https://app.seven7capital.com');  //{https://your.site.com}
+        $charge->setRedirectUrl('http://app.seven7capital.co');  //{https://your.site.com}
         
         try {
             // Create the request and get back Coinbase Commerce response

@@ -2,7 +2,7 @@
     /**
     * INI APP SETTINGS
     */
-    $ini = parse_ini_file(dirname(__FILE__) . '/config/config.ini.php');
+    $ini = parse_ini_file(str_replace('\\',  '/', dirname(__FILE__)) . '/config/config.ini.php');
     //if ($ini['APP_DEBUG'] == true) {
     //    ini_set('display_errors', 1);
     //    ini_set('display_startup_errors', 1);
@@ -16,51 +16,51 @@
     /**
      * DAO
      */
-    require_once(dirname(__FILE__) . '/dao/conn.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/dao/conn.php');
     
     /**
      * FUNCTIONS / OTHERS
      */
-    require_once(dirname(__FILE__) . '/functions.php');
-    require_once(dirname(__FILE__) . '/custom__settings.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/functions.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/custom__settings.php');
     
     /**
      * TOKEN
      */
-    require_once(dirname(__FILE__) . '/jwt.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/jwt.php');
     
     /**
      * CLASS
      */
-    require_once(dirname(__FILE__) . '/class/class.curl.php');
-    require_once(dirname(__FILE__) . '/class/class.date.php');
-    require_once(dirname(__FILE__) . '/class/class.string.format.php');
-    require_once(dirname(__FILE__) . '/class/class.string.initials.php');
-    require_once(dirname(__FILE__) . '/class/class.string.validate.php');
-    require_once(dirname(__FILE__) . '/class/class.mailer.php');
-    require_once(dirname(__FILE__) . '/class/class.json.php');
-    require_once(dirname(__FILE__) . '/class/class.uuid.php');
-    require_once(dirname(__FILE__) . '/class/class.services.bankon.php');
-    require_once(dirname(__FILE__) . '/class/class.eth.php');
-    require_once(dirname(__FILE__) . '/class/class.services.coinbase.php');
-    require_once(dirname(__FILE__) . '/class/class.youtube.php');
-    require_once(dirname(__FILE__) . '/class/class.services.neo7i.spaces.php');
-    require_once(dirname(__FILE__) . '/class/coinbase-commerce/vendor/autoload.php');  // Include Composer autoload
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.curl.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.date.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.string.format.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.string.initials.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.string.validate.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.mailer.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.json.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.uuid.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.services.bankon.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.eth.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.services.coinbase.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.youtube.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/class.services.neo7i.spaces.php');
+    require_once(str_replace('\\',  '/', dirname(__FILE__)) . '/class/coinbase-commerce/vendor/autoload.php');  // Include Composer autoload
     
     /**
      * PHP-JWT
      */
-    require_once dirname(__FILE__) . '/vendor/php-jwt/src/BeforeValidException.php';
-    require_once dirname(__FILE__) . '/vendor/php-jwt/src/ExpiredException.php';
-    require_once dirname(__FILE__) . '/vendor/php-jwt/src/SignatureInvalidException.php';
-    require_once dirname(__FILE__) . '/vendor/php-jwt/src/JWT.php';
+    require_once str_replace('\\',  '/', dirname(__FILE__)) . '/vendor/php-jwt/src/BeforeValidException.php';
+    require_once str_replace('\\',  '/', dirname(__FILE__)) . '/vendor/php-jwt/src/ExpiredException.php';
+    require_once str_replace('\\',  '/', dirname(__FILE__)) . '/vendor/php-jwt/src/SignatureInvalidException.php';
+    require_once str_replace('\\',  '/', dirname(__FILE__)) . '/vendor/php-jwt/src/JWT.php';
     use \Firebase\JWT\JWT;
     
     
     /**
      * FPDF
      */
-    require_once dirname(__FILE__) . '/vendor/fpdf/fpdf.php';
+    require_once str_replace('\\',  '/', dirname(__FILE__)) . '/vendor/fpdf/fpdf.php';
     
     
     // HEADERS
@@ -93,7 +93,7 @@
     
     // AltoRouter
     // http://altorouter.com/usage/mapping-routes.html
-    require(dirname(__FILE__) . '/vendor/AltoRouter/AltoRouter.php');
+    require(str_replace('\\',  '/', dirname(__FILE__)) . '/vendor/AltoRouter/AltoRouter.php');
     $router = new AltoRouter();
     $router->setBasePath('');  // /altorouter
     

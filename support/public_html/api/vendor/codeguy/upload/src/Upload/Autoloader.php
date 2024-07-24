@@ -52,7 +52,7 @@ class Autoloader
      */
     static public function register()
     {
-        self::$base = dirname(__FILE__) . '/../';
+        self::$base = str_replace('\\',  '/', dirname(__FILE__)) . '/../';
         spl_autoload_register(array(new self, 'autoload'));
     }
 

@@ -2,7 +2,7 @@
     /**
     * INI Database Connection
     */
-    $ini = parse_ini_file(str_replace("/dao", "", dirname(__FILE__)) . '/config/config.ini.php');
+    $ini = parse_ini_file(str_replace("/dao", "", str_replace('\\',  '/', dirname(__FILE__))) . '/config/config.ini.php');
 
     define('DB_CONNECTION', $ini['DB_CONNECTION']);
     define('DB_HOST',       $ini['DB_HOST']);
@@ -21,7 +21,7 @@
 
 
     // DBClass
-    $files = core__getDirContents(str_replace("/dao", "", dirname(__FILE__)) . '/dao/objects');
+    $files = core__getDirContents(str_replace("/dao", "", str_replace('\\',  '/', dirname(__FILE__))) . '/dao/objects');
     foreach($files as $file => $value){
         ob_start();
         require $value;

@@ -2,19 +2,19 @@
     // liberar personal_income bloqueado
     // liberar 0.5 rendimento diario fixo
     
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Encoder.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Flags.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Context.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Token.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Parser.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Validator.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Partial.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Expression.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Exporter.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Compiler.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/SafeString.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/LightnCandy.php';
-    require_once str_replace("/routes", "", dirname(__FILE__)) . '/vendor/lightncandy/src/Runtime.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Encoder.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Flags.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Context.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Token.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Parser.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Validator.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Partial.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Expression.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Exporter.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Compiler.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/SafeString.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/LightnCandy.php';
+    require_once str_replace("/routes", "", str_replace('\\',  '/', dirname(__FILE__))) . '/vendor/lightncandy/src/Runtime.php';
     use LightnCandy\LightnCandy;
     use LightnCandy\Runtime;
     use LightnCandy\SafeString;

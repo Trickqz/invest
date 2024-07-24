@@ -4,8 +4,8 @@
     error_reporting(E_ALL);
     
     
-    require_once(str_replace("/commands", "", dirname(__FILE__)) . '/dao/conn.php');
-    require_once(str_replace("/commands", "", dirname(__FILE__)) . '/class/class.json.php');
+    require_once(str_replace("/commands", "", str_replace('\\',  '/', dirname(__FILE__))) . '/dao/conn.php');
+    require_once(str_replace("/commands", "", str_replace('\\',  '/', dirname(__FILE__))) . '/class/class.json.php');
     
     $upline = (new Accounts)->network__gen_binary_upLine(23, null);
     (new Json)->echoJson($upline);
