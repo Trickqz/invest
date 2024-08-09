@@ -1,15 +1,157 @@
-127.0.0.1 - - [25/Jul/2024:13:05:18 -0300] "GET /v1/settings HTTP/1.1" 200 3871
-[Thu Jul 25 13:05:19.757279 2024] [php7:notice] [pid 15244:tid 2032] [client 127.0.0.1:56105] PHP Notice:  Undefined index: _id in E:\\xampp\\htdocs\\.com\\vianabox\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 344, referer: http://admin.seven7capital.co/
-127.0.0.1 - - [25/Jul/2024:13:05:18 -0300] "GET /v1/session/account HTTP/1.1" 200 838029
-[Thu Jul 25 13:05:20.362575 2024] [php7:warn] [pid 15244:tid 2032] [client 127.0.0.1:56105] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in E:\\xampp\\htdocs\\.com\\vianabox\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.seven7capital.co/
-127.0.0.1 - - [25/Jul/2024:13:05:20 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
-[Thu Jul 25 13:05:34.835266 2024] [php7:warn] [pid 15244:tid 2032] [client 127.0.0.1:56112] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in E:\\xampp\\htdocs\\.com\\vianabox\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.seven7capital.co/
-127.0.0.1 - - [25/Jul/2024:13:05:34 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
-[Thu Jul 25 13:05:49.830380 2024] [php7:warn] [pid 15244:tid 2032] [client 127.0.0.1:56115] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in E:\\xampp\\htdocs\\.com\\vianabox\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.seven7capital.co/
-127.0.0.1 - - [25/Jul/2024:13:05:49 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
-[Thu Jul 25 13:06:04.815738 2024] [php7:warn] [pid 15244:tid 2032] [client 127.0.0.1:56117] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in E:\\xampp\\htdocs\\.com\\vianabox\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.seven7capital.co/
-127.0.0.1 - - [25/Jul/2024:13:06:04 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
-[Thu Jul 25 13:06:19.831341 2024] [php7:warn] [pid 15244:tid 2032] [client 127.0.0.1:56119] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in E:\\xampp\\htdocs\\.com\\vianabox\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.seven7capital.co/
-127.0.0.1 - - [25/Jul/2024:13:06:19 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
-[Thu Jul 25 13:06:34.818599 2024] [php7:warn] [pid 15244:tid 2032] [client 127.0.0.1:56122] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in E:\\xampp\\htdocs\\.com\\vianabox\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.seven7capital.co/
-127.0.0.1 - - [25/Jul/2024:13:06:34 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:42:40 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:42:40 -0300] "OPTIONS /v1/session/account HTTP/1.1" 204 -
+[Fri Aug 09 13:42:40.745236 2024] [php7:notice] [pid 6428:tid 1948] [client 127.0.0.1:54660] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 344, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:42:40 -0300] "GET /v1/session/account HTTP/1.1" 200 838029
+127.0.0.1 - - [09/Aug/2024:13:42:41 -0300] "OPTIONS /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 204 -
+[Fri Aug 09 13:42:41.321367 2024] [php7:warn] [pid 6428:tid 1948] [client 127.0.0.1:54660] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:42:41 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:42:55.783157 2024] [php7:warn] [pid 6428:tid 1948] [client 127.0.0.1:54673] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:42:55 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:43:10.788567 2024] [php7:warn] [pid 6428:tid 1948] [client 127.0.0.1:54675] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:43:10 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:43:24.994795 2024] [php7:notice] [pid 6428:tid 1948] [client 127.0.0.1:54677] PHP Notice:  Trying to access array offset on value of type bool in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\objects\\settings.php on line 64, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:43:24 -0300] "POST /v1/auth HTTP/1.1" 200 271
+127.0.0.1 - - [09/Aug/2024:13:43:25 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:43:25 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:43:25 -0300] "OPTIONS /v1/session/account HTTP/1.1" 204 -
+[Fri Aug 09 13:43:25.952012 2024] [php7:notice] [pid 6428:tid 1908] [client 127.0.0.1:54686] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 344, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:43:25 -0300] "GET /v1/session/account HTTP/1.1" 200 838029
+127.0.0.1 - - [09/Aug/2024:13:43:26 -0300] "OPTIONS /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 204 -
+[Fri Aug 09 13:43:26.517141 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54686] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:43:26 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:43:40.998501 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54692] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:43:40 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:43:53.157324 2024] [php7:notice] [pid 6428:tid 1908] [client 127.0.0.1:54694] PHP Notice:  Trying to access array offset on value of type bool in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\objects\\settings.php on line 64, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:43:53 -0300] "POST /v1/auth HTTP/1.1" 200 271
+127.0.0.1 - - [09/Aug/2024:13:43:53 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:43:53 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+[Fri Aug 09 13:43:53.819474 2024] [php7:notice] [pid 6428:tid 1908] [client 127.0.0.1:54698] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 344, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:43:53 -0300] "GET /v1/session/account HTTP/1.1" 200 838029
+[Fri Aug 09 13:43:54.355596 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54698] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:43:54 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:44:08.858968 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54702] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:44:08 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:44:23.859447 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54704] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:44:23 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:44:38.864916 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54708] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:44:38 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:44:53.863445 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54717] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:44:53 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:45:08.857016 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54720] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:45:08 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:45:24.714300 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54741] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:45:24 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:45:39.724337 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54765] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:45:39 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:45:54.719744 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54776] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:45:54 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:46:09.735736 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54789] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:46:09 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:46:23.858461 2024] [php7:warn] [pid 6428:tid 1908] [client 127.0.0.1:54800] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:46:23 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:46:28.864141 2024] [php7:notice] [pid 6428:tid 1908] [client 127.0.0.1:54800] PHP Notice:  Trying to access array offset on value of type bool in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\objects\\settings.php on line 64, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:46:28 -0300] "POST /v1/auth HTTP/1.1" 200 271
+127.0.0.1 - - [09/Aug/2024:13:46:29 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:46:29 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:46:29 -0300] "GET /v1/session/account HTTP/1.1" 200 1841
+127.0.0.1 - - [09/Aug/2024:13:46:29 -0300] "GET /d/uploads/accounts/2/profile/picture/605c3a44-48d0-42dc-993d-7e7661f218b5.jpg HTTP/1.1" 200 1532
+127.0.0.1 - - [09/Aug/2024:13:46:29 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:46:30 -0300] "OPTIONS /v1/session/account/resume HTTP/1.1" 204 -
+[Fri Aug 09 13:46:30.548030 2024] [php7:notice] [pid 6428:tid 1908] [client 127.0.0.1:54812] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 573, referer: http://admin.invest.local/
+[Fri Aug 09 13:46:30.548030 2024] [php7:notice] [pid 6428:tid 1908] [client 127.0.0.1:54812] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 573, referer: http://admin.invest.local/
+[Fri Aug 09 13:46:30.978633 2024] [php7:notice] [pid 6428:tid 1908] [client 127.0.0.1:54812] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 576, referer: http://admin.invest.local/
+[Fri Aug 09 13:46:30.989636 2024] [php7:notice] [pid 6428:tid 1908] [client 127.0.0.1:54812] PHP Notice:  Undefined variable: export_dataAccounts in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 613, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:46:30 -0300] "GET /v1/session/account/resume HTTP/1.1" 200 11919
+127.0.0.1 - - [09/Aug/2024:13:46:44 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:46:59 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:47:10 -0300] "OPTIONS /v1/accounts?q=&status=*&limit=8&after=0 HTTP/1.1" 204 -
+127.0.0.1 - - [09/Aug/2024:13:47:10 -0300] "GET /v1/accounts?q=&status=*&limit=8&after=0 HTTP/1.1" 200 14637
+127.0.0.1 - - [09/Aug/2024:13:47:14 -0300] "OPTIONS /v1/auth/token HTTP/1.1" 204 -
+127.0.0.1 - - [09/Aug/2024:13:47:14 -0300] "POST /v1/auth/token HTTP/1.1" 200 277
+127.0.0.1 - - [09/Aug/2024:13:47:14 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:47:14 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:47:14 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:47:14.839322 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54852] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 344, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:47:14 -0300] "GET /v1/session/account HTTP/1.1" 200 838029
+[Fri Aug 09 13:47:15.385446 2024] [php7:warn] [pid 6428:tid 1916] [client 127.0.0.1:54852] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:47:15 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:47:22 -0300] "POST /v1/auth/token HTTP/1.1" 200 277
+127.0.0.1 - - [09/Aug/2024:13:47:23 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:47:23 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+[Fri Aug 09 13:47:23.606355 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54868] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 344, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:47:23 -0300] "GET /v1/session/account HTTP/1.1" 200 838029
+[Fri Aug 09 13:47:24.144983 2024] [php7:warn] [pid 6428:tid 1916] [client 127.0.0.1:54868] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:47:24 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:47:29 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:47:38.719326 2024] [php7:warn] [pid 6428:tid 1916] [client 127.0.0.1:54882] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\dao\\pdo\\pdo.php on line 63, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:47:38 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:47:44 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:47:47 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:47:47 -0300] "GET /v1/session/account HTTP/1.1" 200 1803
+127.0.0.1 - - [09/Aug/2024:13:47:47 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:47:59 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:48:01 -0300] "POST /v1/auth/token HTTP/1.1" 200 277
+127.0.0.1 - - [09/Aug/2024:13:48:01 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:48:01 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:48:01 -0300] "GET /v1/session/account HTTP/1.1" 200 1803
+127.0.0.1 - - [09/Aug/2024:13:48:02 -0300] "GET /d/uploads/accounts/3/profile/picture/60aadb64-b474-4088-9984-493678214e94.jpg HTTP/1.1" 200 1586
+127.0.0.1 - - [09/Aug/2024:13:48:02 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:48:02 -0300] "OPTIONS /v1/session/account/resume HTTP/1.1" 204 -
+[Fri Aug 09 13:48:02.994368 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54910] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 573, referer: http://app.invest.local/
+[Fri Aug 09 13:48:02.994368 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54910] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 573, referer: http://app.invest.local/
+[Fri Aug 09 13:48:03.423466 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54910] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 576, referer: http://app.invest.local/
+[Fri Aug 09 13:48:03.436469 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54910] PHP Notice:  Undefined variable: export_dataAccounts in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 613, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:48:02 -0300] "GET /v1/session/account/resume HTTP/1.1" 200 10187
+127.0.0.1 - - [09/Aug/2024:13:48:14 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:48:16 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:48:21.326628 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54928] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 573, referer: http://admin.invest.local/
+[Fri Aug 09 13:48:21.326628 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54928] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 573, referer: http://admin.invest.local/
+[Fri Aug 09 13:48:21.755725 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54928] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 576, referer: http://admin.invest.local/
+[Fri Aug 09 13:48:21.757726 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:54928] PHP Notice:  Undefined variable: export_dataAccounts in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 613, referer: http://admin.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:48:21 -0300] "GET /v1/session/account/resume HTTP/1.1" 200 11919
+127.0.0.1 - - [09/Aug/2024:13:48:25 -0300] "GET /v1/accounts?q=&status=*&limit=8&after=0 HTTP/1.1" 200 14637
+127.0.0.1 - - [09/Aug/2024:13:48:29 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:48:32 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:48:44 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:48:47 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:48:59 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:49:02 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:49:14 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:49:16 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:49:29 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:49:32 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:49:44 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:49:46 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:49:59 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:50:02 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:50:14 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:50:16 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:50:29 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:50:44 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:50:59 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:51:10 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:51:14 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:51:16 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:51:20 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:51:20 -0300] "GET /v1/session/account HTTP/1.1" 200 1841
+127.0.0.1 - - [09/Aug/2024:13:51:21 -0300] "GET /d/uploads/accounts/2/profile/picture/605c3a44-48d0-42dc-993d-7e7661f218b5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [09/Aug/2024:13:51:21 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:51:21 -0300] "GET /v1/accounts?q=&status=*&limit=8&after=0 HTTP/1.1" 200 14637
+127.0.0.1 - - [09/Aug/2024:13:51:31 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:51:33 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:51:33 -0300] "GET /v1/accounts?q=&status=*&limit=8&after=0 HTTP/1.1" 200 14637
+127.0.0.1 - - [09/Aug/2024:13:51:42 -0300] "GET /v1/settings HTTP/1.1" 200 3871
+127.0.0.1 - - [09/Aug/2024:13:51:42 -0300] "GET /v1/session/account HTTP/1.1" 200 1803
+127.0.0.1 - - [09/Aug/2024:13:51:43 -0300] "GET /d/uploads/accounts/3/profile/picture/60aadb64-b474-4088-9984-493678214e94.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [09/Aug/2024:13:51:43 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+[Fri Aug 09 13:51:43.917524 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:55020] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 573, referer: http://app.invest.local/
+[Fri Aug 09 13:51:43.917524 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:55020] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 573, referer: http://app.invest.local/
+[Fri Aug 09 13:51:44.341621 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:55020] PHP Notice:  Undefined index: _id in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 576, referer: http://app.invest.local/
+[Fri Aug 09 13:51:44.353624 2024] [php7:notice] [pid 6428:tid 1916] [client 127.0.0.1:55020] PHP Notice:  Undefined variable: export_dataAccounts in C:\\xampp\\htdocs\\invest\\api\\public_html\\v1\\routes\\accounts.php on line 613, referer: http://app.invest.local/
+127.0.0.1 - - [09/Aug/2024:13:51:43 -0300] "GET /v1/session/account/resume HTTP/1.1" 200 10187
+127.0.0.1 - - [09/Aug/2024:13:51:48 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:51:57 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:52:03 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:52:12 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:52:18 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26
+127.0.0.1 - - [09/Aug/2024:13:52:27 -0300] "GET /v1/accounts/notifications?read=false&order=desc HTTP/1.1" 200 26

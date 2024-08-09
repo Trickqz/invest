@@ -3,10 +3,10 @@ const CFG__APP_KEY              = 'base64:5F/Ax5Z5EKykQdkICT5C1NdyIXZsZY7ZXRunds
 const CFG__APP_DEBUG            = false;
 const CFG__APP_LOG_LEVEL        = 'debug';
 const CFG__APP_BASEPATH         = '';
-const CFG__APP_URL              = 'http://app.seven7capital.co';
-const CFG__APP_ADMIN_URL        = 'http://admin.seven7capital.co';
-const CFG__COOKIE_DOMAIN        = '.app.seven7capital.com';
-const CFG__COOKIE_ADMIN_DOMAIN  = '.admin.seven7capital.com';
+const CFG__APP_URL              = 'http://app.invest.local';
+const CFG__APP_ADMIN_URL        = 'http://admin.invest.local';
+const CFG__COOKIE_DOMAIN        = '.app.invest.localm';
+const CFG__COOKIE_ADMIN_DOMAIN  = '.admin.invest.localm';
 const CFG__APP_MODULES          = '';  //financial,commissioning_binary,commissioning_unilevel,budgets,distributors
 const CFG__APP_FISRT_PURCHASE   = true;
 const CFG__APP_VERSION          = '1.0.0.3';
@@ -22,7 +22,7 @@ const CFG__API_KEY              = '609e5ecb-724d-e523-8cff-df90';
 const CFG__API_REST_SPACES_URL  = 'https://api.spaces.brauntech.com.br';
 
 
-const CFG__API_URL              = 'http://api.seven7capital.co';
+const CFG__API_URL              = 'http://api.invest.local';
 const CFG__API_VERSION          = '/v1';
 
 const CFG__API_REST_URL         = '';  //'https://api.commerce.brauntech.com.br/services/v1/rest';
