@@ -1,0 +1,217 @@
+.divgerallingup {
+    width: 100%;
+    height: 100vh;
+    background-color: #181818;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-leftuplogin {
+    z-index: 1;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 38%;
+    height: 100%;
+    background-color: #161616;
+    border-right: #202020 1px solid;
+}
+
+.text-singupleftuplogin {
+    font-size: 25px;
+    color: rgba(226, 232, 240, 0.521);
+    margin-bottom: 40px;
+}
+
+.labelforloginup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputpasswordusernameloginup {
+    padding: 20px;
+    width: 362px;
+    height: 51px;
+    outline: none;
+    background-color: #181818;
+    border: #FFFFFF05 1px solid;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.inputpasswordusernameloginup:focus {
+    transition: all 0.4s ease;
+    border: 1px solid #FFFFFF25;
+}
+
+.labelloginuptextcolor {
+    color: rgba(226, 232, 240, 0.521);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 13px;
+}
+
+.forgoutpasswordmy {
+    color: rgba(226, 232, 240, 0.308);
+    margin-left: 177px;
+    font-size: 13px;
+    font-weight: 400;
+    transition: all ease 0.4s;
+}
+
+.forgoutpasswordmy:hover {
+    color: rgb(226, 232, 240);
+}
+
+.buttonpasswordusernameloginup {
+    outline: none;
+    width: 362px;
+    height: 51px;
+    margin-top: 36px;
+    background-color: #1C744D;
+    border: 1px solid #26C57E;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all ease 0.4s;
+}
+
+.buttonpasswordusernameloginup:hover {
+    background-color: #15593B;
+}
+
+.card-rightuplogin {
+    height: 100%;
+    width: 62%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.h1-textwelcomeloginup {
+    color: #fff;
+    z-index: 1;
+    font-size: 75px;
+}
+
+.image-rightuplogin {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    user-select: none;
+    z-index: 0;
+}
+
+.svg-imagewelcomeloginup {
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    bottom: -170px;
+    left: 38%;
+    width: 62%;
+}
+
+.inputboxcheckboxinputremember {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    color: rgba(226, 232, 240, 0.534);
+}
+
+.h5checkboxinputremember {
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(226, 232, 240, 0.534);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#checkboxinputremember, .checkboxinputremember {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1030px) {
+    .card-rightuplogin {
+      display: none;
+    }
+
+    .card-leftuplogin {
+        width: 100%;
+    }
+  }
+
+@media only screen and (max-width: 371px) {
+      .inputpasswordusernameloginup {
+        width: 300px;
+      }
+      .buttonpasswordusernameloginup {
+        width: 300px;
+      }
+      .buttonpasswordusernameloginupnext {
+        width: 300px;
+      }
+       .buttonpasswordusernameloginupback {
+        width: 300px;
+      }
+      .forgoutpasswordmy {
+        margin-left: 180px;
+      }
+    }
+
+.alertforgotpasswordlogin {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.margintop13px {
+    margin-top: 13px;
+}
+
+.buttonpasswordusernameloginupback {
+    outline: none;
+    width: 362px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: #c2464600;
+    border: 1px solid #df3c3c;
+    color: #ee5c5c;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all ease 0.4s;
+}
+
+    
+.buttonpasswordusernameloginupback:hover {
+    background-color: rgb(173, 53, 53);
+    color: #fff;
+}
+
+.buttonpasswordusernameloginupnext {
+    outline: none;
+    width: 362px;
+    height: 51px;
+    background-color: #1C744D;
+    border: 1px solid #26C57E;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all ease 0.4s;
+}
+
+.buttonpasswordusernameloginupnext:hover {
+    background-color: #15593B;
+}
