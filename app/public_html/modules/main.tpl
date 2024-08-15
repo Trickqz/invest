@@ -1,4 +1,80 @@
+<style>
+    canvas {
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+    }
+</style>
+
+<script type="text/javascript">
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    var renderer = new THREE.WebGLRenderer();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    var spotLight = new THREE.SpotLight(0xffffff);
+    spotLight.position.set(100,100,100);
+    spotLight.castShadow = true; //If set to true light will cast dynamic shadows. Warning: This is expensive and requires tweaking to get shadows looking right.
+    spotLight.shadowMapWidth = 1024;
+    spotLight.shadowMapHeight = 1024;
+    spotLight.shadowCameraNear = 500;
+    spotLight.shadowCameraFar = 4000;
+    spotLight.shadowCameraFov = 30;
+    scene.add(spotLight);
+
+    function Mat(){
+    var material = new THREE.MeshPhongMaterial({
+        color      : new THREE.Color("rgb(35,35,213)"),  //Diffuse color of the material
+        emissive   : new THREE.Color("#bb9e73"),
+        specular   : new THREE.Color("rgb(93,195,255)"), /*Specular color of the material, i.e., how shiny the material is and the color of its shine. 
+                                                        Setting this the same color as the diffuse value (times some intensity) makes the material more metallic-looking; 
+                                                        setting this to some gray makes the material look more plastic. Default is dark gray.*/
+        shininess  : 1,                                  //How shiny the specular highlight is; a higher value gives a sharper highlight. Default is 30.
+        shading    : THREE.FlatShading,                  //How the triangles of a curved surface are rendered: THREE.SmoothShading, THREE.FlatShading, THREE.NoShading
+        wireframe  : 1,                                  //THREE.Math.randInt(0,1)
+        transparent: 1,
+        opacity    : 0.10                               //THREE.Math.randFloat(0,1) 
+    });
+    return material;
+    }
+
+    /* Create Geometry */
+    var geometry = new THREE.SphereGeometry(50,20,20,0,Math.PI*2,0,Math.PI);
+    //SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+
+    /* Create Earth Sphere*/
+    var earth = new THREE.Mesh(geometry, Mat());
+
+    /*
+    var numSphere = 30;
+    var tabSphere = [];
+    for(var i=0: i<numSphere; i++){
+    tabShpere.push(new Sphere(i));
+    scene.add(tabSphere[i].b);
+    }
+    */
+
+    scene.add(earth);
+
+    camera.position.z = 90;
+
+    function render(){
+    requestAnimationFrame(render);
+    earth.rotation.x += 0.0005;
+    earth.rotation.y += 0.00100;
+    earth.position.x = 90;
+    renderer.render(scene, camera);
+    }
+    render();
+</script>
+
 <div class="wrapper">
+    <canvas></canvas>
     <div class="sticky-top">
         <header class="navbar navbar-expand-md navbar-light sticky-top d-print-none">
             <div class="container-xl">
@@ -7,7 +83,7 @@
                 </button>
                 <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3" style="padding-top: 0;padding-bottom: 0;">
                     <a href="javascript:router.navigate('/');">
-                        <img src="/assets/img/logo-wide.png" srcset="/assets/img/logo-wide.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image" style="height: 38px;" />
+                        <img src="/assets/img/logo-wide.png" srcset="/assets/img/logo-wide.png" width="auto" height="32" alt="Tabler" class="navbar-brand-image" style="height: 22px;" />
                     </a>
                 </h1>
                 
@@ -602,47 +678,8 @@
                                         </span>
                                     </a>
                                 </li>
-                                <li class="nav-item" data-menu="/my-points">
-                                    <a class="nav-link" href="javascript:router.navigate('/my-points');">
-                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-dotted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                               <line x1="7.5" y1="4.21" x2="7.5" y2="4.22"></line>
-                                               <line x1="4.21" y1="7.5" x2="4.21" y2="7.51"></line>
-                                               <line x1="3" y1="12" x2="3" y2="12.01"></line>
-                                               <line x1="4.21" y1="16.5" x2="4.21" y2="16.51"></line>
-                                               <line x1="7.5" y1="19.79" x2="7.5" y2="19.8"></line>
-                                               <line x1="12" y1="21" x2="12" y2="21.01"></line>
-                                               <line x1="16.5" y1="19.79" x2="16.5" y2="19.8"></line>
-                                               <line x1="19.79" y1="16.5" x2="19.79" y2="16.51"></line>
-                                               <line x1="21" y1="12" x2="21" y2="12.01"></line>
-                                               <line x1="19.79" y1="7.5" x2="19.79" y2="7.51"></line>
-                                               <line x1="16.5" y1="4.21" x2="16.5" y2="4.22"></line>
-                                               <line x1="12" y1="3" x2="12" y2="3.01"></line>
-                                            </svg>
-                                        </span>
-                                        <span class="nav-link-title">
-                                            Points
-                                        </span>
-                                    </a>
-                                </li>
                             {{/if}}
                             
-                            <li class="nav-item" data-menu="/request">
-                                <a class="nav-link" href="javascript:router.navigate('/request');">
-                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-receipt-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                          <desc>Download more icon variants from https://tabler-icons.io/i/receipt-2</desc>
-                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                          <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2" />
-                                          <path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5" />
-                                        </svg>
-                                    </span>
-                                    <span class="nav-link-title">
-                                        Request
-                                    </span>
-                                </a>
-                            </li>
                             
                             {{#contains "administrator" system.userdata._role}}
                                 <li class="nav-item dropdown" data-menu="/report" style="/*opacity: 0.7;pointer-events: none;*/">
@@ -763,22 +800,6 @@
                                 </li>
                             {{else}}
                             {{/contains}}
-                            
-                            <li class="nav-item" data-menu="/upload">
-                                <a class="nav-link" href="javascript:router.navigate('/upload');">
-                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                                            <polyline points="7 11 12 16 17 11" />
-                                            <line x1="12" y1="4" x2="12" y2="16" />
-                                        </svg>
-                                    </span>
-                                    <span class="nav-link-title">
-                                        Upload
-                                    </span>
-                                </a>
-                            </li>
                             
                             <hr style="padding: 0;margin: 10px 22px;">
                             

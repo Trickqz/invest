@@ -1,3 +1,190 @@
+<style>
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#particle-container {
+    position: absolute;
+    width: 100%;
+    height: 152px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    bottom: 2px;
+    width: 4px;
+    height: 4px;
+    background-color: #bb9e73;
+    border-radius: 50%;
+    filter: blur(5px);
+    animation: move 10s linear infinite;
+    opacity: 0;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-5000%);
+        opacity: 0;
+    }
+}
+
+.card-1-1 {
+    position: relative;
+    height: 154px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.logo img,
+.chip img,
+.number,
+.name,
+.from,
+.to,
+.ring {
+  position: absolute;
+}
+
+.logo img {
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.name {
+  left: 26px;
+  top: 20px;
+}
+
+.number {
+  left: 26px;
+  top: 35px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.from {
+  font-size: 0.5rem;
+  bottom: 35px;
+  right: 110px;
+}
+
+.to {
+  font-size: 0.5rem;
+  bottom: 35px;
+  right: 40px;
+}
+
+.ring {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: transparent;
+  border: 50px solid #bb9e7320;
+  bottom: -250px;
+  right: -250px;
+  box-sizing: border-box;
+}
+
+.ring::after {
+  content: "";
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  background: transparent;
+  border: 30px solid #bb9e7320;
+  bottom: -80px;
+  right: -110px;
+  box-sizing: border-box;
+}
+
+.progress-bar33-color {
+    background-color: #bb9e73;
+}
+
+.progress-bar22-color {
+    background-color: #16334f;
+}
+
+.btn-primary {
+    --tblr-btn-color: #bb9e73 !important;
+    --tblr-btn-color-interactive: #bb9e7370 !important;
+    --tblr-btn-color-text: #fafbfc !important
+}
+
+body {
+    background-color: rgba(9, 20, 31, 1) !important;
+}
+
+.theme-dark .navbar {
+    background-color: rgba(20, 31, 41, 1)
+}
+
+.theme-dark .alert:not(.alert-important), .theme-dark .card, .theme-dark .card-footer, .theme-dark .card-stacked::after, .theme-dark .dropdown-menu, .theme-dark .footer:not(.footer-transparent), .theme-dark .modal-content, .theme-dark .modal-header {
+    background-color: rgba(20, 31, 41, 1);
+    color: inherit;
+}
+
+.btn {
+    --tblr-btn-color-text-rgb: var(--tblr-body-color-rgb);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-color: rgba(187, 158, 115, 0.10);
+    white-space: nowrap;
+    background-color: rgba(187, 158, 115, 0.79);
+    color: var(--tblr-btn-color-text);
+}
+
+.theme-dark .form-check-input:not(:checked), .theme-dark .form-control, .theme-dark .form-file-text, .theme-dark .form-imagecheck-figure:before, .theme-dark .form-select, .theme-dark .form-selectgroup-check, .theme-dark .form-selectgroup-label {
+    background-color: rgba(187, 158, 115, 0.79);
+    color: #fafbfc;
+    border-color: #2c3c56;
+}
+
+.viewreporttext {
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 5px
+}
+
+.welcomewidthpx {
+    font-size: 28px !important;
+}
+
+@media (max-width: 575px) {
+    .card-1-1 {
+        height: 300px;
+        width: 100%;
+    }
+
+    .borderlinedivision {
+        display: block !important;
+    }
+}
+.borderlinedivision {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+</style>
+
 <div class="container-xl">
     <!-- Page title -->
     <div class="page-header d-print-none">
@@ -5,11 +192,9 @@
             <div class="col">
                 <!-- Page pre-title -->
                 <div class="page-pretitle">
-                    Dashboard
+                    Welcome
                 </div>
-                <h2 class="page-title">
-                    Overview
-                </h2>
+            <h2 class="page-title welcomewidthpx">Hi {{system.userdata._name}}, It's good to have you back!</h2>
             </div>
             <!-- Page title actions -->
             <div class="col-auto ms-auto d-print-none">
@@ -52,32 +237,7 @@
                             </span>
                         {{else}}
                         {{/contains}}
-                    {{else}}
-                        <span class="d-none d-sm-inline">
-                            <a href="javascript:;" class="btn btn-primary /*d-none d-sm-inline-block*/" onclick="View.openFormIncomeGet();">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-exchange" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <circle cx="5" cy="18" r="2" />
-                                    <circle cx="19" cy="6" r="2" />
-                                    <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" />
-                                    <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3" />
-                                </svg>
-                                Generate income
-                            </a>
-                        </span>
-                        <span class="d-none d-sm-inline">
-                            <a href="javascript:;" class="btn btn-primary /*d-none d-sm-inline-block*/" onclick="View.openFormIncomeGet2();">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-exchange" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <circle cx="5" cy="18" r="2" />
-                                    <circle cx="19" cy="6" r="2" />
-                                    <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" />
-                                    <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3" />
-                                </svg>
-                                Generate balance
-                            </a>
-                        </span>
-                        
+                    {{else}}      
                         {{#contains "true" settings.money_add_service_enabled}}
                             <span class="d-none d-sm-inline">
                                 <a href="javascript:;" class="btn btn-primary /*d-none d-sm-inline-block*/" onclick="View.openFormWalletMoneyAdd();">
@@ -126,98 +286,6 @@
                                 <line x1="5" y1="12" x2="19" y2="12" />
                             </svg>
                         </a>-->
-                    {{/if}}
-                    
-                    {{#if system.isadmin}}
-                    {{else}}
-                        <div class="btn-list">
-                            <div class="form-group">
-                                <div id="binary--btn-group" class="btn-group w-100">
-                                    {{#contains "left" system.userdata._binary_key}}
-                                        <button type="button" class="btn btn-primary" data-tab="left" title="Set binary left">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                               <line x1="5" y1="12" x2="19" y2="12"></line>
-                                               <line x1="5" y1="12" x2="11" y2="18"></line>
-                                               <line x1="5" y1="12" x2="11" y2="6"></line>
-                                            </svg>
-                                            <!--Left-->
-                                        </button>
-                                        <button type="button" class="btn" data-tab="right" title="Set binary right">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                               <line x1="5" y1="12" x2="19" y2="12"></line>
-                                               <line x1="13" y1="18" x2="19" y2="12"></line>
-                                               <line x1="13" y1="6" x2="19" y2="12"></line>
-                                            </svg>
-                                            <!--Right-->
-                                        </button>
-                                    {{else}}
-                                        <button type="button" class="btn" data-tab="left" title="Set binary left">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                               <line x1="5" y1="12" x2="19" y2="12"></line>
-                                               <line x1="5" y1="12" x2="11" y2="18"></line>
-                                               <line x1="5" y1="12" x2="11" y2="6"></line>
-                                            </svg>
-                                            <!--Left-->
-                                        </button>
-                                        <button type="button" class="btn btn-primary" data-tab="right" title="Set binary right">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                               <line x1="5" y1="12" x2="19" y2="12"></line>
-                                               <line x1="13" y1="18" x2="19" y2="12"></line>
-                                               <line x1="13" y1="6" x2="19" y2="12"></line>
-                                            </svg>
-                                            <!--Right-->
-                                        </button>
-                                    {{/contains}}
-                                </div>
-                                <script>
-                                    if (typeof page__index__binaryButtons === 'undefined') {
-                                        let page__index__binaryButtons = document.querySelectorAll('#binary--btn-group .btn');
-                                        for(let i = 0; i<page__index__binaryButtons.length; i++){
-                                            page__index__binaryButtons[i].addEventListener('click', () => {
-                                                var btnLst = document.querySelectorAll('#binary--btn-group .btn');
-                                                for(var i2 = 0; i2<btnLst.length; i2++){
-                                                    if (page__index__binaryButtons[i].getAttribute("data-tab") == btnLst[i2].getAttribute("data-tab")) {
-                                                        page__index__binaryButtons[i].classList.add("btn-primary");
-                                                    } else {
-                                                        btnLst[i2].classList.remove("btn-primary");
-                                                    }
-                                                }
-                                                
-                                                if (page__index__binaryButtons[i].getAttribute("data-tab") == "left") {
-                                                    fc_setBinaryKey('left');
-                                                } else if (page__index__binaryButtons[i].getAttribute("data-tab") == "right") {
-                                                    fc_setBinaryKey('right');
-                                                }
-                                            });
-                                        }
-                                    }
-                                    
-                                    function fc_setBinaryKey(key) {
-                                        $.ajax({
-                                            type: 'POST',
-                                            url: CFG__API_URL + CFG__API_VERSION + "/session/account/binary/key",
-                                            beforeSend: function (xhr){ 
-                                                xhr.setRequestHeader('Authorization', cookieGet('__utmo'));
-                                            },
-                                            data: {
-                                                "key": key
-                                            },
-                                            success: function(response) {
-                                                if (response.success === true) {
-                                                    //
-                                                } else {
-                                                    App.alert('Warning', response.message, null);
-                                                }
-                                            }
-                                        });
-                                    }
-                                </script>
-                            </div>
-                        </div>
                     {{/if}}
                 </div>
             </div>
@@ -380,7 +448,7 @@
                     <div class="col-sm-6 col-lg-3">
                 {{/contains}}
             {{/contains}}
-                <div id="card1" class="card">
+                <div id="card1" class="card-1-1">
                     <div class="row g-0 align-items-center">
                         <div class="col">
                             <div class="card-body">
@@ -392,6 +460,7 @@
                     </div>
                 </div>
             </div>
+                <div class="borderlinedivision" style="display: none"></div>
             {{#contains "financial" system.userdata._role}}
                 <div class="col-sm-6 col-lg-3" style="display: none;">
             {{else}}
@@ -434,24 +503,6 @@
                     </div>
                 </div>
             </div>
-                
-                {{#if system.isadmin}}
-                {{else}}
-                    <div class="col-sm-6 col-lg-3">
-                        <div id="card2-a" class="card">
-                            <div class="row g-0 align-items-center">
-                                <div class="col">
-                                    <div class="card-body">
-                                        <div class="skeleton-heading"></div>
-                                        <div class="skeleton-line"></div>
-                                        <div class="skeleton-line"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {{/if}}
-                
                 <div class="col-sm-6 col-lg-3" style="display: none;">
                     <div id="card5" class="card">
                         <div class="row g-0 align-items-center">
@@ -484,7 +535,7 @@
                     {{#contains "support" system.userdata._role}}
                         <div class="col-sm-6 col-lg-3" style="display: none;">
                     {{else}}
-                        <div class="col-sm-6 col-lg-3">
+                        <div class="col-sm-6">
                     {{/contains}}
                 {{/contains}}
                     <div id="card4" class="card">
@@ -700,37 +751,35 @@
                 chargesStr += '</div>';
                 
                 document.getElementById("card1").innerHTML = 
-                      '<div class="card-body">'
-                    + '    <div class="d-flex align-items-center">'
-                    + '        <div class="subheader">Balance</div>'
-                    //        <!--<div class="ms-auto lh-1">
-                    //            <div class="dropdown">
-                    //                <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Últimos 7 dias</a>
-                    //                <div class="dropdown-menu dropdown-menu-end">
-                    //                    <a class="dropdown-item active" href="#">Últimos 7 dias</a>
-                    //                    <a class="dropdown-item" href="#">Últimos 30 dias</a>
-                    //                    <a class="dropdown-item" href="#">Últimos 3 meses</a>
-                    //                </div>
-                    //            </div>
-                    //        </div>-->
-                    + '    </div>'
-                    + '    <div class="d-flex align-items-baseline">'
-                    + '        <div class="h1 mb-0 me-2">' + fmtMoney(arr.wallet.balance.total) + '</div>'
-                    + '        <div class="me-auto">'
-                    + '            <span class="text-red d-inline-flex align-items-center lh-1">'
-                    +                  chargesStr
-    ///                +              voucher
-                    //                <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                    //+ '                <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                    //+ '                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />'
-                    //+ '                    <polyline points="3 17 9 11 13 15 21 7" />'
-                    //+ '                    <polyline points="14 7 21 7 21 14" />'
-                    //+ '                </svg>'
-                    + '            </span>'
-                    + '        </div>'
-                    + '    </div>'
-                    + '</div>'
-                    + '<div id="chart-revenue-bg" class="chart-sm" style="/*display: none;*/"></div>';
+                '<div class="card-group">'
+            + '  <div class="card-1-1">'
+            + '      <div id="particle-container"></div>'
+            + '      <div class="logo"><img src="./assets/img/logocart.png" alt="Visa"></div>'
+            + '      <div class="number">' + fmtMoney(arr.wallet.balance.total) + '</div>'
+            + '      <div class="name subheader">Balance</div>'
+            + '      <div class="ring"></div>'
+            + '  </div>'
+            + '</div>';
+
+
+            const container = document.getElementById('particle-container');
+
+            for (let i = 0; i < 50; i++) { // Reduzi o número de partículas para se adequar ao tamanho do cartão
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                container.appendChild(particle);
+            }
+
+                var blockedStr = '<div>';
+                if (arr.personal_income.available > 0) {
+                    blockedStr += '<span title="Aid income released" class="text-green"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/bolt-off</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="3" y1="3" x2="21" y2="21" /><path d="M15.212 15.21l-4.212 5.79v-7h-6l3.79 -5.21m1.685 -2.32l2.525 -3.47v6m1 1h5l-2.104 2.893" /></svg> ' + fmtMoney(arr.personal_income.available) + ' / avaliable for balance</span><br />';
+                }
+                if (arr.personal_income.blocked > 0) {
+                    blockedStr += '<span title="Aid income blocked"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/bolt-off</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="3" y1="3" x2="21" y2="21" /><path d="M15.212 15.21l-4.212 5.79v-7h-6l3.79 -5.21m1.685 -2.32l2.525 -3.47v6m1 1h5l-2.104 2.893" /></svg> ' + fmtMoney(arr.personal_income.blocked) + '</span><br />';
+                }
                 
                 var blockedStr = '<div>';
                 if (arr.personal_income.available > 0) {
@@ -744,22 +793,12 @@
                       '<div class="card-body">'
                     + '    <div class="d-flex align-items-center">'
                     + '        <div class="subheader">Gain</div>'
-                    //         <!--<div class="ms-auto lh-1">
-                    //             <div class="dropdown">
-                    //                 <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Últimos 7 dias</a>
-                    //                 <div class="dropdown-menu dropdown-menu-end">
-                    //                     <a class="dropdown-item active" href="#">Últimos 7 dias</a>
-                    //                     <a class="dropdown-item" href="#">Últimos 30 dias</a>
-                    //                     <a class="dropdown-item" href="#">Últimos 3 meses</a>
-                    //                 </div>
-                    //             </div>
-                    //         </div>-->
                     + '    </div>'
-                    //+ '    <div class="h1 mb-3">' + fmtMoney(arr.credit.total) + '</div>'
                     + '<div class="h1 mb-3 row" title="Total gain">'
                     + '<div class="col-sm-8">' + fmtMoney(arr.wallet.gain.total) + '</div>'
-                    + '<div class="col-sm-4">'
-                    + '<a class="dropdown-item" href="javascript:router.navigate(`/income-extract`);">'
+                    + '<div class="col-sm-4" style="flex-direction: column-reverse; align-items: center; display: flex;">'
+                    + '<p class="viewreporttext">VIEW REPORT</p>'
+                    + '<a href="javascript:router.navigate(`/income-extract`);">'
                     + '<button type="button" class="btn btn-primary " data-tab="left" title="Income [Extract]">'
                     + '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-autofit-down m-0" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                     + '<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>'
@@ -767,42 +806,19 @@
                     + '<path d="M18 4v17"></path>'
                     + '<path d="M15 18l3 3l3 -3"></path>'
                     + '</svg>'
-                    + '</button>'
-                    + '</a></div>'
+                    + '</a>'
+                    + '</div>'
                     + '</div>'
                     + '    <div class="d-flex /*mb-2*/">'
                     + '        <div class="text-green">'
-                    // + '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                    // + '  <desc>Download more icon variants from https://tabler-icons.io/i/calendar-event</desc>'
-                    // + '  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                    // + '  <rect x="4" y="5" width="16" height="16" rx="2" />'
-                    // + '  <line x1="16" y1="3" x2="16" y2="7" />'
-                    // + '  <line x1="8" y1="3" x2="8" y2="7" />'
-                    // + '  <line x1="4" y1="11" x2="20" y2="11" />'
-                    // + '  <rect x="8" y="15" width="2" height="2" />'
-                    //+ '</svg> '
-    //                +              fmtMoney(arr.credit.month) + ' no mês'
-                    //+              fmtMoney(arr.wallet.gain.month) + ' / avaliable for balance<br />'
                     + '            <span class="text-red d-inline-flex align-items-center lh-1">'
                     +                  blockedStr
-    ///                +              voucher
-                    //                <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                    //+ '                <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                    //+ '                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />'
-                    //+ '                    <polyline points="3 17 9 11 13 15 21 7" />'
-                    //+ '                    <polyline points="14 7 21 7 21 14" />'
-                    //+ '                </svg>'
                     + '            </span>'
                     + '        </div>'
                     + '    </div>'
                     + '    <div id="previsionGain" class="d-flex mb-2">'
                     + '        <div class="skeleton-line"></div>'
                     + '    </div>'
-                    //+ '    <div class="progress progress-sm">'
-                    //+ '        <div class="progress-bar bg-blue" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">'
-                    //+ '            <span class="visually-hidden">75% Complete</span>'
-                    //+ '        </div>'
-                    //+ '    </div>'
                     + '</div>';
                 
                 
@@ -895,16 +911,6 @@
                             {{else}}
                             + '        <div class="subheader">RECOMMENDATIONS</div>'
                             {{/if}}
-                            //        <!--<div class="ms-auto lh-1">
-                            //            <div class="dropdown">
-                            //                <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Últimos 7 dias</a>
-                            //                <div class="dropdown-menu dropdown-menu-end">
-                            //                    <a class="dropdown-item active" href="#">Últimos 7 dias</a>
-                            //                    <a class="dropdown-item" href="#">Últimos 30 dias</a>
-                            //                    <a class="dropdown-item" href="#">Últimos 3 meses</a>
-                            //                </div>
-                            //            </div>
-                            //        </div>-->
                             + '    </div>'
                             + '    <div class="d-flex align-items-baseline">'
                             + '        <div class="h1 mb-3 me-2">' + arr.count.accounts.total + '</div>'
@@ -916,110 +922,10 @@
                             + '    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>'
                             + '    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>'
                             + '    </svg>'
-                            //+ '            <span class="text-yellow d-inline-flex align-items-center lh-1">'
-                            //+                  arr.count.accounts.in_month + ' in month'
-                            //                <!-- Download SVG icon from http://tabler-icons.io/i/minus -->
-                            //+ '                <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                            //+ '                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />'
-                            //+ '                    <line x1="5" y1="12" x2="19" y2="12" />'
-                            //+ '                </svg>'
-                            //+ '            </span>'
                             + '        </div>'
                             + '    </div>'
-                            + '    <div id="chart-new-clients" class="chart-sm" style="/*display: none;*/"></div>'
+                            + '    <div id="chart-new-clients" class="chart-sm"></div>'
                             + '</div>';
-                        
-                        
-                        {{#if system.isadmin}}
-                        {{else}}
-                            var binaryStatus = '<span class="text-red d-inline-flex align-items-center lh-1">Inactive</span>';
-                            if (arr.binary.active == true) {
-                                binaryStatus = '<span class="text-yellow d-inline-flex align-items-center lh-1">Active</span>';
-                            }
-                            
-                            binaryStatus += '&nbsp;//&nbsp;';
-                            
-                            if (arr.binary.receiving == true) {
-                                binaryStatus += '<span class="text-yellow d-inline-flex align-items-center lh-1">qualified</span>';
-                            } else {
-                                binaryStatus += '<span class="text-red d-inline-flex align-items-center lh-1">unqualified</span>';
-                            }
-                            
-                            var binaryLeft = 0,
-                                binaryRight = 0,
-                                totalBinaryLeft = 0,
-                                totalBinaryRight = 0,
-                                binaryPaid_pts = 0;
-                            
-                            if (arr.binary.left > 0) {
-                                binaryLeft = parseFloat(arr.binary.left); //.toFixed(2)
-                            }
-                            if (arr.binary.right > 0) {
-                                binaryRight = parseFloat(arr.binary.right); //.toFixed(2)
-                            }
-                            if (arr.binary.totalLeft > 0) {
-                                totalBinaryLeft = parseFloat(arr.binary.totalLeft); //.toFixed(2)
-                            }
-                            if (arr.binary.totalLeft > 0) {
-                                totalBinaryRight = parseFloat(arr.binary.totalRight); //.toFixed(2)
-                            }
-                            if (arr.binary.paid_pts > 0) {
-                                binaryPaid_pts = parseFloat(arr.binary.paid_pts); //.toFixed(2)
-                            }
-                            
-                            document.getElementById("card2-a").innerHTML = 
-                                  '<div class="card-body">'
-                                + '    <div class="d-flex align-items-center">'
-                                + '        <div class="subheader">Binary</div>'
-                                //         <!--<div class="ms-auto lh-1">
-                                //             <div class="dropdown">
-                                //                 <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Últimos 7 dias</a>
-                                //                 <div class="dropdown-menu dropdown-menu-end">
-                                //                     <a class="dropdown-item active" href="#">Últimos 7 dias</a>
-                                //                     <a class="dropdown-item" href="#">Últimos 30 dias</a>
-                                //                     <a class="dropdown-item" href="#">Últimos 3 meses</a>
-                                //                 </div>
-                                //             </div>
-                                //         </div>-->
-                                + '    </div>'
-                //                + '    <div class="h1 mb-3">' + fmtMoney(arr.credit.total) + '</div>'
-                                + '    <div class="h1 mb-3" title="Total Left / Right [Paid]: ' + totalBinaryLeft + ' / ' + totalBinaryRight + ' ['+binaryPaid_pts+']">' + binaryLeft + '&nbsp;|&nbsp;' + binaryRight + '</div>'
-                                + '    <div class="d-flex /*mb-2*/">'
-                                + '        <div class="text-green">'
-                                + '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '  <desc>Download more icon variants from https://tabler-icons.io/i/calendar-event</desc>'
-                                + '  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '  <rect x="4" y="5" width="16" height="16" rx="2" />'
-                                + '  <line x1="16" y1="3" x2="16" y2="7" />'
-                                + '  <line x1="8" y1="3" x2="8" y2="7" />'
-                                + '  <line x1="4" y1="11" x2="20" y2="11" />'
-                                + '  <rect x="8" y="15" width="2" height="2" />'
-                                + '</svg> '
-                //                +              fmtMoney(arr.credit.month) + ' no mês'
-                                +              fmtMoney(arr.binary.gain) + ' gain<br />'
-                ///                + '            <span class="text-red d-inline-flex align-items-center lh-1">'
-                ///                +                  blockedStr
-                ///                +              voucher
-                                //                <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                                //+ '                <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                //+ '                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />'
-                                //+ '                    <polyline points="3 17 9 11 13 15 21 7" />'
-                                //+ '                    <polyline points="14 7 21 7 21 14" />'
-                                //+ '                </svg>'
-                ///                + '            </span>'
-                                + '        </div>'
-                                + '    </div>'
-                                + '    <div class="d-flex mb-2 mt-2">'
-                                + '        <div class="skeleton-line">' + binaryStatus + '</div>'
-                                + '    </div>'
-                                //+ '    <div class="progress progress-sm">'
-                                //+ '        <div class="progress-bar bg-blue" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">'
-                                //+ '            <span class="visually-hidden">75% Complete</span>'
-                                //+ '        </div>'
-                                //+ '    </div>'
-                                + '</div>';
-                        {{/if}}
-                        
                         
                         /** CHARGES **/
                         /**var elSystemNotificationArea = document.getElementById("system--notification-area");
@@ -1149,7 +1055,7 @@
                         document.getElementById("card6").innerHTML = 
                               '<div class="card-body">'
                             + '    <div class="d-flex align-items-center">'
-                            + '        <div class="subheader">SEVEN CAPITAL Quote (DAILY INCOME)</div>'
+                            + '        <div class="subheader">AXEL DAILY INCOME</div>'
                             //        <!--<div class="ms-auto lh-1">
                             //            <div class="dropdown">
                             //                <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Últimos 7 dias</a>
@@ -1184,51 +1090,26 @@
                             perc_received = arr.donations.received / perc_rec_rel;
                         
                         document.getElementById("card7").innerHTML = 
-                            '<div class="card-body">'
-                        
-                        
+                            '<div class="card-body">'                
                             + '    <div class="d-flex align-items-center">'
                             + '        <div class="subheader">License progress</div>'
-                            //+ '         <div class="ms-auto lh-1">'
-                            //+ '             <div class="dropdown">'
-                            //+ '                 <a id="setDataPointsGraduationType-text" class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exibir pontos</a>'
-                            //+ '                 <div class="dropdown-menu dropdown-menu-end">'
-                            //+ '                     <a id="setDataPointsGraduationType-points" class="dropdown-item active" href="javascript:;" onclick="setDataPointsGraduationType(\'points\');">Exibir pontos</a>'
-                            //+ '                     <a id="setDataPointsGraduationType-estimate" class="dropdown-item" href="javascript:;" onclick="setDataPointsGraduationType(\'estimate\');">Exibir estimativa</a>'
-                            //+ '                 </div>'
-                            //+ '             </div>'
-                            //+ '         </div>'
                             + '    </div>'
-                        
-                        
-                          //+ '      <p class="mb-3">' + (arr2.extra__data.prevision.vt / 100.00) + ' pts / <strong>' + ((arr2.extra__data.prevision.graduation.next.ve - arr2.extra__data.prevision.vt) / 100.00) + ' pts</strong> para <strong>' + arr2.extra__data.prevision.graduation.next.name + '</strong></p>'
-                          ///+ '      <p class="mb-3">' + (arr2.extra__data.prevision.vt / 100.00) + ' pts <span class="data--points-graduation-estimate" style="display: none !important;"> / <strong>' + (arr2.extra__data.prevision.graduation.next.points_required / 100.00) + ' pts</strong> para <strong>' + arr2.extra__data.prevision.graduation.next.name + '</span></strong></p>'
-                          //+ '      <p class="mb-3">10 pts <span class="data--points-graduation-estimate" style="display: none !important;"> / <strong>' + (arr2.extra__data.prevision.graduation.next.points_required / 100.00) + ' pts</strong> para <strong>' + arr2.extra__data.prevision.graduation.next.name + '</span></strong></p>'
                           + '      <p class="mb-3">'+fmtMoney(arr.donations.amount)+' <span class="data--points-graduation-estimate" style="/*display: none !important;*/"> / <strong>'+fmtMoney(arr.donations.income-arr.donations.received)+'</strong> to <strong>'+fmtMoney(arr.donations.income)+'</span></strong></p>'
                           + '      <div class="progress progress-separated mb-3">'
-                          + '          <div class="progress-bar bg-info" role="progressbar" style="width: ' + perc_received + '%;"></div>'
-                          + '          <div class="progress-bar bg-primary" role="progressbar" style="width: ' + perc_income + '%;"></div>'
+                          + '          <div class="progress-bar22-color" role="progressbar" style="width: ' + perc_received + '%;"></div>'
+                          + '          <div class="progress-bar33-color" role="progressbar" style="width: ' + perc_income + '%;"></div>'
                           + '      </div>'
                           + '      <div class="row">'
                           + '          <div class="col-auto d-flex align-items-center px-2">'
-                          + '              <span class="legend me-2 bg-info"></span>'
+                          + '              <span class="legend me-2 progress-bar22-color"></span>'
                           + '              <span>Gain</span>'
-                          //+ '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">' + (arr2.extra__data.prevision.vme / 100.00) + 'pts</span>'
                           + '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted"></span>'
                           + '          </div>'
                           + '          <div class="col-auto d-flex align-items-center pe-2">'
-                          + '              <span class="legend me-2 bg-primary"></span>'
+                          + '              <span class="legend me-2 progress-bar33-color"></span>'
                           + '              <span>To be receive</span>'
-                          //+ '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">' + (arr2.extra__data.prevision.vp / 100.00) + 'pts</span>'
                           + '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted"></span>'
                           + '          </div>'
-                          //+ '          <div class="col-auto d-flex align-items-center ps-2 data--points-graduation-estimate" style="display: none !important;">'
-                          //+ '              <span class="legend me-2"></span>'
-                          //+ '              <span>Próx. graduação</span>'
-                          //+ '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">' + ((arr2.extra__data.prevision.graduation.next.ve - arr2.extra__data.prevision.vt) / 100.00) + 'pts</span>'
-                          //+ '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">' + (arr2.extra__data.prevision.graduation.next.points_required / 100.00) + 'pts</span>'
-                          //+ '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">60pts</span>'
-                          //+ '          </div>'
                           + '    </div>'
                           + '</div>';
                         
@@ -1237,22 +1118,10 @@
                               '<div class="card-body">'
                             + '    <div class="d-flex align-items-center">'
                             + '        <div class="subheader">Licenses</div>'
-                            //         <!--<div class="ms-auto lh-1">
-                            //             <div class="dropdown">
-                            //                 <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Últimos 7 dias</a>
-                            //                 <div class="dropdown-menu dropdown-menu-end">
-                            //                     <a class="dropdown-item active" href="#">Últimos 7 dias</a>
-                            //                     <a class="dropdown-item" href="#">Últimos 30 dias</a>
-                            //                     <a class="dropdown-item" href="#">Últimos 3 meses</a>
-                            //                 </div>
-                            //             </div>
-                            //         </div>-->
                             + '    </div>'
-            //                + '    <div class="h1 mb-3">' + fmtMoney(arr.credit.total) + '</div>'
                             + '    <div class="h1 mb-3">' + arr.count.donations.total + '</div>'
                             + '    <div class="d-flex /*mb-2*/">'
                             + '        <div class="text-green">'
-            //                +              fmtMoney(arr.credit.month) + ' no mês'
                             +              arr.count.donations.receiving + ' active'
                             + '        </div>'
                             + '    </div>'
@@ -1264,7 +1133,7 @@
                             //+ '            <span class="visually-hidden">75% Complete</span>'
                             //+ '        </div>'
                             //+ '    </div>'
-                            + '    <div id="chart-active-users" class="chart-sm" style="/*display: none;*/"></div>'
+                            + '    <div id="chart-active-users" class="chart-sm" style="display: none;"></div>'
                             + '</div>';
 
 
@@ -1447,7 +1316,7 @@
                     document.getElementById("data--fc_index_indications").innerHTML = 
                           '<div class="container-xl d-flex flex-column justify-content-center">'
                         + '    <div class="empty">'
-                        + '        <div class="empty-img"><img src="https://cdn.brauntech.com.br/ajax/libs/tabler/1.0.0-beta9/demo/static/illustrations/undraw_printing_invoices_5r4r.svg" height="128" alt="" /></div>'
+                        + '        <div class="empty-img"><img src="/assets/js/libs/1.0.0-beta20/demo/static/illustrations/undraw_printing_invoices_5r4r.svg" height="128" alt="" /></div>'
                         + '        <p class="empty-title">No indication found</p>'
                         + '    </div>'
                         + '</div>';
@@ -1595,7 +1464,7 @@
                                 },
                             },
                             labels: chartLabelsUsers.reverse(),
-                            colors: ["#206bc4"],  //"#a8aeb7"
+                            colors: ["#bb9e73"],  //"#bb9e73"
                             legend: {
                                 show: false,
                             },
@@ -1670,7 +1539,7 @@
                                 },
                             },
                             labels: chartLabelsQuotations.reverse(),
-                            colors: ["#2fb344"],
+                            colors: ["#bb9e73"],
                             legend: {
                                 show: false,
                             },
@@ -1741,7 +1610,7 @@
                                 },
                             },
                             labels: chartLabelsIncome.reverse(),
-                            colors: ["#df5716"],  //"#206bc4","#a8aeb7"
+                            colors: ["#bb9e73"],  //"#bb9e73","#bb9e73"
                             legend: {
                                 show: false,
                             },
@@ -1947,7 +1816,7 @@
                                 },
                             },
                             labels: chartLabelsNetworkUsers.reverse(),
-                            colors: ["#206bc4"],
+                            colors: ["#bb9e73"],
                             legend: {
                                 show: false,
                             },

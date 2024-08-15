@@ -11912,7 +11912,7 @@ body {
 .navbar .navbar-text a,
 .navbar .navbar-text a:focus,
 .navbar .navbar-text a:hover {
-    color: rgba(30, 41, 59, .7)
+    color: rgba(0, 98, 255, 0.7)
 }
 
 @media not print {
@@ -14203,7 +14203,7 @@ body:not(.theme-dark) .hide-theme-light {
         --tblr-body-color: #fafbfc;
         --tblr-body-color-rgb: 250, 251, 252;
         --tblr-body-bg: #181818;
-        --tblr-body-bg-rgb: 27, 36, 52;
+        --tblr-body-bg-rgb: #181818;
         --tblr-card-bg: #161616;
         --tblr-card-bg-rgb: 30, 41, 59;
         --tblr-border-color: #1C744D;
@@ -14379,7 +14379,7 @@ body:not(.theme-dark) .hide-theme-light {
             --tblr-body-color: #fafbfc;
             --tblr-body-color-rgb: 250, 251, 252;
             --tblr-body-bg: #181818;
-            --tblr-body-bg-rgb: 27, 36, 52;
+            --tblr-body-bg-rgb: 30, 30, 30;
             --tblr-card-bg: #161616;
             --tblr-card-bg-rgb: 30, 41, 59;
             --tblr-border-color: #26C57E;
@@ -15912,7 +15912,7 @@ a.card:hover {
     bottom: 0;
     left: 0;
     content: "";
-    background: rgba(30, 41, 59, .48)
+    background: #0D172248
 }
 
 .card-cover:first-child,
@@ -20054,7 +20054,7 @@ img {
 
 .bg-dark-overlay {
     color: #fff;
-    background-color: rgba(30, 41, 59, .24)
+    background-color: #0D172224
 }
 
 .bg-cover {
@@ -20172,7 +20172,7 @@ img {
 
 .bg-dark-lt {
     color: #161616 !important;
-    background: rgba(30, 41, 59, .05) !important
+    background: #0D172205 !important
 }
 
 .bg-muted {
