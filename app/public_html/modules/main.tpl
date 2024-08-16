@@ -674,7 +674,7 @@
                                             </svg>
                                         </span>
                                         <span class="nav-link-title">
-                                            My licenses
+                                            My Investments
                                         </span>
                                     </a>
                                 </li>

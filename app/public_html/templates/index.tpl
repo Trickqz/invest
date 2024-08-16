@@ -1085,57 +1085,61 @@ body {
                             perc_vme = arr2.extra__data.prevision.vt / perc_rel;
                         */
                         
-                        var perc_rec_rel = arr.donations.income / 100.0,
-                            perc_income = arr.donations.income / perc_rec_rel,
-                            perc_received = arr.donations.received / perc_rec_rel;
-                        
+                       var perc_income = 100,
+                        perc_received = (arr.donations.received / arr.donations.income) * 100,
+                        perc_gain = (arr.wallet.gain.total / arr.donations.income) * 100;
+
+                        const totalGain = arr.wallet.gain.total;
+                        const totalDonation = arr.donations.income - arr.donations.received;
+
+                        const divisionResult = totalDonation - totalGain;
+                        const formattedResult = fmtMoney(divisionResult);
+
                         document.getElementById("card7").innerHTML = 
                             '<div class="card-body">'                
                             + '    <div class="d-flex align-items-center">'
                             + '        <div class="subheader">License progress</div>'
                             + '    </div>'
-                          + '      <p class="mb-3">'+fmtMoney(arr.donations.amount)+' <span class="data--points-graduation-estimate" style="/*display: none !important;*/"> / <strong>'+fmtMoney(arr.donations.income-arr.donations.received)+'</strong> to <strong>'+fmtMoney(arr.donations.income)+'</span></strong></p>'
-                          + '      <div class="progress progress-separated mb-3">'
-                          + '          <div class="progress-bar22-color" role="progressbar" style="width: ' + perc_received + '%;"></div>'
-                          + '          <div class="progress-bar33-color" role="progressbar" style="width: ' + perc_income + '%;"></div>'
-                          + '      </div>'
-                          + '      <div class="row">'
-                          + '          <div class="col-auto d-flex align-items-center px-2">'
-                          + '              <span class="legend me-2 progress-bar22-color"></span>'
-                          + '              <span>Gain</span>'
-                          + '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted"></span>'
-                          + '          </div>'
-                          + '          <div class="col-auto d-flex align-items-center pe-2">'
-                          + '              <span class="legend me-2 progress-bar33-color"></span>'
-                          + '              <span>To be receive</span>'
-                          + '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted"></span>'
-                          + '          </div>'
-                          + '    </div>'
-                          + '</div>';
-                        
-                  
-                        document.getElementById("card4").innerHTML = 
-                              '<div class="card-body">'
-                            + '    <div class="d-flex align-items-center">'
-                            + '        <div class="subheader">Licenses</div>'
+                            + '    <p class="mb-3">'+ fmtMoney(totalGain)+' <span class="data--points-graduation-estimate"> / <strong>' + formattedResult + '</strong> to <strong>' + fmtMoney(arr.donations.income) + '</strong></span></p>'
+                            + '      <div class="progress progress-separated mb-3">'
+                            + '          <div class="progress-bar22-color" role="progressbar" style="width: ' + perc_gain + '%;"></div>'  // Exibindo o ganho
+                            + '          <div class="progress-bar33-color" role="progressbar" style="width: 100%;"></div>'
+                            + '      </div>'
+                            + '      <div class="row">'
+                            + '          <div class="col-auto d-flex align-items-center px-2">'
+                            + '              <span class="legend me-2 progress-bar22-color"></span>'
+                            + '              <span>Gain</span>'
+                            + '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted"></span>'
+                            + '          </div>'
+                            + '          <div class="col-auto d-flex align-items-center pe-2">'
+                            + '              <span class="legend me-2 progress-bar33-color"></span>'
+                            + '              <span>To be received</span>'
+                            + '              <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted"></span>'
+                            + '          </div>'
                             + '    </div>'
-                            + '    <div class="h1 mb-3">' + arr.count.donations.total + '</div>'
+                            + '</div>';
+
+
+                            let totalDonations = arr.count.donations.total; 
+                            let totalDonationsNumber = parseFloat(totalDonations);
+                            let tenTimesDonations = totalDonationsNumber * 10;
+                            let formattedTenTimesDonations = fmtMoney(tenTimesDonations);
+
+                            document.getElementById("card4").innerHTML = 
+                            '<div class="card-body">'
+                            + '    <div class="d-flex align-items-center">'
+                            + '        <div class="subheader">financial contribution</div>'
+                            + '    </div>'
+                            + '    <div class="h1 mb-3">' + formattedTenTimesDonations + '</div>'
                             + '    <div class="d-flex /*mb-2*/">'
-                            + '        <div class="text-green">'
-                            +              arr.count.donations.receiving + ' active'
+                            + '        <div class="text-green">'+ formattedTenTimesDonations +' active'
                             + '        </div>'
                             + '    </div>'
                             + '    <div id="previsionGain1" class="d-flex mb-2">'
                             + '        <div class="skeleton-line"></div>'
                             + '    </div>'
-                            //+ '    <div class="progress progress-sm">'
-                            //+ '        <div class="progress-bar bg-blue" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">'
-                            //+ '            <span class="visually-hidden">75% Complete</span>'
-                            //+ '        </div>'
-                            //+ '    </div>'
                             + '    <div id="chart-active-users" class="chart-sm" style="display: none;"></div>'
                             + '</div>';
-
 
                         
     /**                    
