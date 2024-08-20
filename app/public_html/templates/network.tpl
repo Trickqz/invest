@@ -21,11 +21,6 @@
                               </div>
                               -->
                             <div class="form-group">
-                        <div id="my_store__customers--btn-group" class="btn-group w-100">
-                            <button type="button" class="btn btn-primary" data-tab="unilevel">Show matrix</button>
-                            <button type="button" class="btn" data-tab="binary">Show binary matrix</button>
-                            <button type="button" class="btn" data-tab="downline">Show downline</button>
-                        </div>
                         <script>
                             if (typeof page__network__buttons === 'undefined') {
                                 let page__network__buttons = document.querySelectorAll('#my_store__customers--btn-group .btn');
@@ -274,7 +269,6 @@
                         for (var i = 0; i < arr.length; i++){
                             var directOpt = '';
                             if (arr[i]._count_direct > 0) {
-                                directOpt = '<a class="btn primary" href="javascript:fc_unilevelGetDownline(\'' + arr[i]._username + '\');" style="margin-top: 3px;height: 28px;line-height: 28px;">show +' + arr[i]._count_direct + '</a>';
                             }
                             
                             /**
@@ -328,7 +322,7 @@
                                 //+ '         <b>' + state + '</b><br />'
                                 //+           city
                                 //+ '    </td>'
-                                + '    <td class="text-muted text-center" data-label="Licenses">'
+                                + '    <td class="text-muted text-center" data-label="investment">'
                                 //+           arr[i].extra__data.plan.name + '<br />'
                                 //+ '         <b>' + arr[i].extra__data.graduation.name + '</b><br />'
                                 //+           arr[i].extra__data.prevision.graduation.name + '</b><br />'
@@ -372,7 +366,7 @@
                             + '                             <tr>'
                             + '                                 <th>User data</th>'
                             //+ '                                 <th>Local</th>'
-                            + '                                 <th class="text-center">Licenses</th>'
+                            + '                                 <th class="text-center">investment</th>'
                             //+ '                                 <th>Pontuação unilevel</th>'
                             + '                                 <th class="text-center">Registration</th>'
                             //+ '                                 <th class="w-1"></th>'
@@ -522,7 +516,7 @@
                                 //+ '         <b>' + state + '</b><br />'
                                 //+           city
                                 //+ '    </td>'
-                                + '    <td class="text-muted text-center" data-label="Licenses">'
+                                + '    <td class="text-muted text-center" data-label="investment">'
                                 //+           arr[i].extra__data.plan.name + '<br />'
                                 //+ '         <b>' + arr[i].extra__data.graduation.name + '</b><br />'
                                 //+           arr[i].extra__data.prevision.graduation.name + '</b><br />'
@@ -636,7 +630,7 @@
                             + '                             <tr>'
                             + '                                 <th>User data</th>'
                             //+ '                                 <th>Local</th>'
-                            + '                                 <th class="text-center">Licenses</th>'
+                            + '                                 <th class="text-center">Investment</th>'
                             //+ '                                 <th>Pontuação unilevel</th>'
                             + '                                 <th class="text-center">Registration</th>'
                             //+ '                                 <th class="w-1"></th>'
@@ -717,8 +711,6 @@
                                 tbodyHTMLTree += 
                                       '<li id="tree--' + arr[i]._username + '">'
                                     + '    <div title="' + arr[i]._name + '">'
-                                    + '        <span class="left" style="background: url(\'{{CFG__API_URL}}/d/uploads/accounts/'+arr[i]._id+'/profile/picture/'+arr[i]._picture_src+'\'), url(\'/assets/img/149071.png\') no-repeat;background-size: contain;"></span>'
-                                    + '        <span class="left-sub">'
                                     + '            <span>' + arr[i]._name + '</span>'
                                     + '            <span>' + arr[i]._username + '</span>'
                                     +              binaryStatus + receivingStatus

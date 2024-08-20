@@ -1,7 +1,7 @@
 .divgerallingup {
     width: 100%;
     height: 100vh;
-    background-color: #181818;
+    background-color: #09141F;
     display: flex;
     margin: 0;
     padding: 0;
@@ -17,8 +17,8 @@
     flex-direction: column;
     width: 38%;
     height: 100%;
-    background-color: #161616;
-    border-right: #202020 1px solid;
+    background-color: #0c141b;
+    border-right: #4c77af21 1px solid;
 }
 
 .text-singupleftuplogin {
@@ -37,7 +37,7 @@
     width: 362px;
     height: 51px;
     outline: none;
-    background-color: #181818;
+    background-color: #1E293B;
     border: #FFFFFF05 1px solid;
     border-radius: 7px;
     margin-bottom: 10px;
@@ -74,8 +74,8 @@
     width: 362px;
     height: 51px;
     margin-top: 36px;
-    background-color: #1C744D;
-    border: 1px solid #26C57E;
+    background-color: #BB9E73;
+    border: 1px solid #ffc671;
     color: #fff;
     border-radius: 7px;
     cursor: pointer;
@@ -85,7 +85,7 @@
 }
 
 .buttonpasswordusernameloginup:hover {
-    background-color: #15593B;
+    background-color: #bb9e73ce;
 }
 
 .card-rightuplogin {
@@ -202,8 +202,8 @@
     outline: none;
     width: 362px;
     height: 51px;
-    background-color: #1C744D;
-    border: 1px solid #26C57E;
+    background-color: #BB9E73;
+    border: 1px solid #ffc671;
     color: #fff;
     border-radius: 7px;
     cursor: pointer;
@@ -213,5 +213,108 @@
 }
 
 .buttonpasswordusernameloginupnext:hover {
-    background-color: #15593B;
+    background-color: #bb9e73c7;
+}
+
+.step3-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #09141F;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step3-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.modalsss {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contentss {
+    position: relative;
+    background-color: #FAFAF9;
+    margin: 15% auto;
+    padding: 40px;
+    width: 464px;
+    min-height: 255px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-contentss > input {
+    width: 100%;
+    border: 1px solid #EBEBEB;
+    height: 45px;
+    border-radius: 8px;
+    padding: 10px;
+    outline: none !important;
+    margin-top: 24px;
+}
+
+.modal-contentss > button {
+    width: 100%;
+    height: 45px;
+    background-color: #383838;
+    color: white;
+    border-radius: 8px;
+    outline: none !important;
+    margin-top: 16px;
+}
+
+.modal-contentss > span {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-finance-buy {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1E293B;
+    border: 1px solid #ffffff31;
+    border-radius: 17px;
+    width: 280px;
+    height: 320px;
+    transition: all ease 0.6s;
+    cursor: pointer;
+}
+
+.card-finance-buy:hover {
+    border: 1px solid #bb9e73;
 }

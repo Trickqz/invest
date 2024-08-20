@@ -2,11 +2,59 @@
     body {
         overflow: hidden;
     }
+
+    .image-mapworld {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        z-index: -1;
+        background
+        width: 100%;  /* ou um valor fixo */
+        height: 400px;
+        object-fit: cover;
+    }
+
+    @media only screen and (max-width: 1030px) {
+        .image-mapworld {
+            display: block !important;
+        }
+        .circle-div1 {
+            display: block !important;
+    }
+
+    .circle-div1 {
+        display: none;
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        left: 10%;
+        width: 200px !important;
+        height: 200px !important;
+        border-radius: 100%;
+        filter: blur(100px) !important;
+        background-color: #bb9e73;
+    }
+
+    .circle-div2 {
+        position: absolute;
+        z-index: 0;
+        bottom: 0px;
+        left: 50%;
+        width: 200px !important;
+        height: 200px !important;
+        border-radius: 100%;
+        filter: blur(220px) !important;
+        background-color: #fff;
+    }
 </style>
 
 <div class="divgerallingup">
     <div class="card-leftuplogin">
+    <img style="height: 40px" src="../assets/img/logo-white.png">
         <form id="frmLogin" name="frmLogin" class="card-md" autocomplete="off">
+                <img class="image-mapworld" style="display: none" src="/assets/img/map-base1.svg">
+                <div class="circle-div1"></div>
+                <div class="circle-div2"></div>
             <div class="card-body">
                 <h1 class="text-singupleftuplogin">Sign-in</h1>
                 <div class="labelforloginup">
@@ -33,14 +81,14 @@
         </form>
     </div>
     <div class="card-rightuplogin">
-        <h1 class="h1-textwelcomeloginup">I'm glad to see you <font style="color: #26C57E;"><br>again!</font></h1>         
+        <h1 class="h1-textwelcomeloginup">I'm glad to see you <font style="color: #BB9E73;"><br>again!</font></h1>         
         <img class="image-rightuplogin" src="/assets/img/grid.svg" alt="" srcset="">
         <svg class="svg-imagewelcomeloginup" width="1159" height="799" viewBox="0 0 1159 799" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.2" d="M-679.064 259.956C-782.649 371.698 -977.262 457.612 -1061.62 486.602V875.582H2093V96.56C1616.28 96.56 1610.39 765.956 1339.66 765.956C1068.93 765.956 1057.15 386.456 921.788 386.456C786.422 386.456 821.735 592.019 509.804 568.3C197.873 544.581 44.8505 310.029 -143.485 96.56C-330.807 -115.759 -547.24 117.738 -676.965 257.691L-679.064 259.956Z" fill="#26C57E"/>
-            <path opacity="0.2" d="M-595.808 557.353C-694.653 471.796 -950.786 412.15 -1066.5 393.022V875.582H2093V768.636C1669.38 768.636 1357.55 366.937 1316.36 304.335C1275.18 241.733 1181.04 111.311 922.162 111.311C663.284 111.311 445.59 372.154 192.595 526.052C-60.3999 679.949 -178.072 674.733 -260.443 674.733C-342.813 674.733 -472.252 664.299 -595.808 557.353Z" fill="#009452"/>
-            <ellipse cx="106.332" cy="383.367" rx="17.2727" ry="19.0561" fill="#26C57E"/>
-            <ellipse cx="511.02" cy="573.117" rx="17.2727" ry="19.0561" fill="#26C57E"/>
-            <ellipse cx="910.833" cy="388.638" rx="17.2727" ry="19.0561" fill="#26C57E"/>
+            <path opacity="0.2" d="M-679.064 259.956C-782.649 371.698 -977.262 457.612 -1061.62 486.602V875.582H2093V96.56C1616.28 96.56 1610.39 765.956 1339.66 765.956C1068.93 765.956 1057.15 386.456 921.788 386.456C786.422 386.456 821.735 592.019 509.804 568.3C197.873 544.581 44.8505 310.029 -143.485 96.56C-330.807 -115.759 -547.24 117.738 -676.965 257.691L-679.064 259.956Z" fill="#BB9E73"/>
+            <path opacity="0.2" d="M-595.808 557.353C-694.653 471.796 -950.786 412.15 -1066.5 393.022V875.582H2093V768.636C1669.38 768.636 1357.55 366.937 1316.36 304.335C1275.18 241.733 1181.04 111.311 922.162 111.311C663.284 111.311 445.59 372.154 192.595 526.052C-60.3999 679.949 -178.072 674.733 -260.443 674.733C-342.813 674.733 -472.252 664.299 -595.808 557.353Z" fill="#BB9E73"/>
+            <ellipse cx="106.332" cy="383.367" rx="17.2727" ry="19.0561" fill="#BB9E73"/>
+            <ellipse cx="511.02" cy="573.117" rx="17.2727" ry="19.0561" fill="#BB9E73"/>
+            <ellipse cx="910.833" cy="388.638" rx="17.2727" ry="19.0561" fill="#BB9E73"/>
         </svg>
     </div>
 </div>

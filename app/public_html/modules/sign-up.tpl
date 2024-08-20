@@ -9,7 +9,7 @@
         width: 362px;
         height: 51px;
         outline: none;
-        background-color: #181818;
+        background-color: #1E293B;
         border: #FFFFFF05 1px solid;
         border-radius: 7px;
         margin-bottom: 10px;
@@ -36,6 +36,14 @@
       display: none;
     }
 
+    .h1-textwelcomeloginup {
+        display: none;
+    }
+
+    .img-logowhite {
+        display: none;
+    }
+
     .text-centeralign {
         max-width: 300px;
         font-size: 40px !important;
@@ -47,6 +55,9 @@
       .inputpasswordusernameloginup {
         width: 300px;
       }
+      .img-logowhite {
+        display: none;
+    }
       .inputpasswordusernameloginup2 {
         width: 300px;
       }
@@ -70,24 +81,26 @@
 
 <div class="divgerallingup">
     <div class="card-leftuplogin">
+    <img class="img-logowhite" style="height: 40px" src="../assets/img/logo-white.png">
         <form id="frmLogin" name="frmLogin" class="card-md" autocomplete="off">
             <div class="card-body">
                 <form id="frmRegister" name="frmRegister" class="card card-md">
-                    <div class="card-body">
+                    <div class="card-body" style="width: 362px;">
 
                         <!-- Step 1 -->
-                        <div id="step1">
+                        <div id="step1" class="disabled">
+                        <h1 style="position: absolute; top: 41%; left: 50%" class="h1-textwelcomeloginup">Create your <font style="color: #BB9E73;"><br>account!</font></h1>
                           <h1 class="text-stepunotwo">STEP 1</h1>
                             <h1 class="text-centeralign">Enter your <font style="color: #26C57E;">personal</font> data</h1>
                             <div class="mb-3">
                                 <span class="labelloginuptextcolor">Sponsor:</span>
-                                <div id="dataIndicator" style="margin-top: 12px; margin-bottom: 28px; height: auto; max-width: 362px; max-height: 260px; background: #15593B; padding: 8px; font-size: 14px; border-radius: 4px;">
+                                <div id="dataIndicator" style="margin-top: 12px;margin-bottom: 28px;height: auto;max-height: 260px;background: #151c2a;padding: 8px;font-size: 14px;border-radius: 4px;">
                                     Checking your referral...
                                 </div>
                                 <input name="sponsor" type="hidden" value="">
                             </div>
 
-                            <section id="register" class="disabled">
+                            <section id="register">
                                 <div class="mb-3" style="display: none;">
                                     <div class="labelloginuptextcolor">Type</div>
                                     <div>
@@ -152,12 +165,13 @@
                                     <div id="mobile_phone--invalid-feedback" class="invalid-feedback" style="display: none;"></div>
                                 </div>
 
-                                <button type="button" class="buttonpasswordusernameloginup" onclick="nextStep(2)">Next</button>
+                                <button type="button" class="buttonpasswordusernameloginup" onclick="nextStep(1)">Next</button>
                             </section>
                         </div>
 
                         <!-- Step 2 -->
                         <div id="step2" style="display: none;">
+                        <h1 style="position: absolute; top: 41%; left: 50%" class="h1-textwelcomeloginup">Create your <font style="color: #BB9E73;"><br>account!</font></h1>
                          <h1 class="text-stepunotwo">STEP 2</h1>
                           <h1 class="text-centeralign">Now enter data for <font style="color: #26C57E;">your access</font></h1>
                             <div class="flex-direction">
@@ -211,11 +225,53 @@
                                 </label>
                             </div>
 
-                            <div class="form-footer flex-direction">
+                            <div class="flex-direction">
                                 <div id="msg"></div>
-                                <button id="newRegister" type="submit" class="buttonpasswordusernameloginupnext" disabled="">Create account</button>
-                                <button type="button" class="buttonpasswordusernameloginupback" onclick="prevStep(1)">Back</button>
+                                <button id="newRegister" type="submit" class="buttonpasswordusernameloginup" onclick="nextStep(2)" disabled="">Create account</button>
+                                <button type="button" class="buttonpasswordusernameloginupback" onclick="prevStep(2)">Back</button>
                             </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div id="step3" class="step3-background" style="display: none;">
+                            <h1 style="font-size: 30px; font-weight: 600; margin-bottom: 20px">Start investing now!</h1>
+                            <div class="step3-container">
+                                <div class="card-finance-buy" style="padding: 20px">
+                                    <img style="width: 110px" src="../assets/img/logo-buyicon.png">
+                                    <p style="font-size: 13px; margin-top: 20px; font-weight: 500; color: #fff">INVESTMENT 1</p>
+                                    <h1 style="font-size: 26px">USD 2.000</h1>
+                                    <h4 style="text-align: center; font-size: 12px; font-weight: 300; color: #8A8A8A">Advantages:<br>Yields up to USD 4.000,00%</h4>
+                                </div>
+                                <div class="card-finance-buy" style="padding: 20px">
+                                    <img style="width: 110px" src="../assets/img/logo-buyicon.png">
+                                    <p style="font-size: 13px; margin-top: 20px; font-weight: 500; color: #fff">INVESTMENT 2</p>
+                                    <h1 style="font-size: 26px">USD 2.000</h1>
+                                    <h4 style="text-align: center; font-size: 12px; font-weight: 300; color: #8A8A8A">Advantages:<br>Yields up to USD 4.000,00%</h4>
+                                </div>
+                                <div class="card-finance-buy" style="padding: 20px">
+                                    <img style="width: 110px" src="../assets/img/logo-buyicon.png">
+                                    <p style="font-size: 13px; margin-top: 20px; font-weight: 500; color: #fff">INVESTMENT 3</p>
+                                    <h1 style="font-size: 26px">USD 2.000</h1>
+                                    <h4 style="text-align: center; font-size: 12px; font-weight: 300; color: #8A8A8A">Advantages:<br>Yields up to USD 4.000,00%</h4>
+                                </div>
+                                <div class="card-finance-buy" style="padding: 20px">
+                                    <img style="width: 110px" src="../assets/img/logo-buyicon.png">
+                                    <p style="font-size: 13px; margin-top: 20px; font-weight: 500; color: #fff">INVESTMENT 4</p>
+                                    <h1 style="font-size: 26px">USD 2.000</h1>
+                                    <h4 style="text-align: center; font-size: 12px; font-weight: 300; color: #8A8A8A">Advantages:<br>Yields up to USD 4.000,00%</h4>
+                                </div>
+                            </div>
+                            <a id="openModalBtn" style="cursor: pointer; font-size: 16; margin-top: 25px; text-decoration: underline;">How much do you want to invest?</a>
+                            <div id="modal" class="modalsss">
+                                <div class="modal-contentss">
+                                    <span id="closeModalBtn" class="close">&times;</span>
+                                    <h1 style="color: #272727">Enter the value</h1>
+                                    <p style="color: #AFAFAF">Enter how much you want to invest</p>
+                                    <input type="text" id="valor" oninput="formatarValor(this)">
+                                    <button id="submitBtn">Enviar</button>
+                                </div>
+                            </div>
+                            <a href="javascript:router.navigate('/');" style="cursor: pointer; font-size: 16; color: white; margin-top: 25px; text-decoration: underline;">leave for later</a>
                         </div>
                     </div>
                 </form>
@@ -230,29 +286,94 @@
         </form>
     </div>
         <div class="card-rightuplogin">
-        <h1 class="h1-textwelcomeloginup">Enter your <font style="color: #26C57E;">personal</font><br>data</h1>
         <img class="image-rightuplogin" src="/assets/img/grid.svg" alt="" srcset="">
         <svg class="svg-imagewelcomeloginup" width="1159" height="799" viewBox="0 0 1159 799" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.2" d="M-679.064 259.956C-782.649 371.698 -977.262 457.612 -1061.62 486.602V875.582H2093V96.56C1616.28 96.56 1610.39 765.956 1339.66 765.956C1068.93 765.956 1057.15 386.456 921.788 386.456C786.422 386.456 821.735 592.019 509.804 568.3C197.873 544.581 44.8505 310.029 -143.485 96.56C-330.807 -115.759 -547.24 117.738 -676.965 257.691L-679.064 259.956Z" fill="#26C57E"/>
-            <path opacity="0.2" d="M-595.808 557.353C-694.653 471.796 -950.786 412.15 -1066.5 393.022V875.582H2093V768.636C1669.38 768.636 1357.55 366.937 1316.36 304.335C1275.18 241.733 1181.04 111.311 922.162 111.311C663.284 111.311 445.59 372.154 192.595 526.052C-60.3999 679.949 -178.072 674.733 -260.443 674.733C-342.813 674.733 -472.252 664.299 -595.808 557.353Z" fill="#009452"/>
-            <ellipse cx="106.332" cy="383.367" rx="17.2727" ry="19.0561" fill="#26C57E"/>
-            <ellipse cx="511.02" cy="573.117" rx="17.2727" ry="19.0561" fill="#26C57E"/>
-            <ellipse cx="910.833" cy="388.638" rx="17.2727" ry="19.0561" fill="#26C57E"/>
+            <path opacity="0.2" d="M-679.064 259.956C-782.649 371.698 -977.262 457.612 -1061.62 486.602V875.582H2093V96.56C1616.28 96.56 1610.39 765.956 1339.66 765.956C1068.93 765.956 1057.15 386.456 921.788 386.456C786.422 386.456 821.735 592.019 509.804 568.3C197.873 544.581 44.8505 310.029 -143.485 96.56C-330.807 -115.759 -547.24 117.738 -676.965 257.691L-679.064 259.956Z" fill="#BB9E73"/>
+            <path opacity="0.2" d="M-595.808 557.353C-694.653 471.796 -950.786 412.15 -1066.5 393.022V875.582H2093V768.636C1669.38 768.636 1357.55 366.937 1316.36 304.335C1275.18 241.733 1181.04 111.311 922.162 111.311C663.284 111.311 445.59 372.154 192.595 526.052C-60.3999 679.949 -178.072 674.733 -260.443 674.733C-342.813 674.733 -472.252 664.299 -595.808 557.353Z" fill="#BB9E73"/>
+            <ellipse cx="106.332" cy="383.367" rx="17.2727" ry="19.0561" fill="#BB9E73"/>
+            <ellipse cx="511.02" cy="573.117" rx="17.2727" ry="19.0561" fill="#BB9E73"/>
+            <ellipse cx="910.833" cy="388.638" rx="17.2727" ry="19.0561" fill="#BB9E73"/>
         </svg>
     </div>
 </div>
 
 
     <script>
+        function formatarValor(input) {
+        let valor = input.value.replace(/\D/g, '');
 
-        function nextStep(step) {
-            document.getElementById('step1').style.display = 'none';
-            document.getElementById('step2').style.display = 'block';
+        if (valor < 0) {
+            valor = 0;
         }
 
-        function prevStep(step) {
-            document.getElementById('step2').style.display = 'none';
-            document.getElementById('step1').style.display = 'block';
+        valor = (valor / 100).toFixed(2); 
+        valor = valor.replace('.', ','); 
+        valor = '$ ' + valor;
+
+        input.value = valor;
+        }
+
+        const modal = document.getElementById('modal');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const inputField = document.getElementById('inputField');
+
+        openModalBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        submitBtn.addEventListener('click', () => {
+            const userInput = inputField.value;
+            alert(`Você digitou: ${userInput}`);
+            modal.style.display = 'none';
+        });
+
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        const carouselRow = document.querySelector('.carousel-row');
+
+        let scrollPosition = 0;
+
+        prevButton.addEventListener('click', () => {
+            scrollPosition += 100; // Ajuste o valor conforme necessário para o seu design
+            carouselRow.style.transform = `translateX(${scrollPosition}%)`;
+        });
+
+        nextButton.addEventListener('click', () => {
+            scrollPosition -= 100; // Ajuste o valor conforme necessário para o seu design
+            carouselRow.style.transform = `translateX(${scrollPosition}%)`;
+        });
+
+        function nextStep(currentStep) {
+            if (currentStep === 1) {
+                document.getElementById('step1').style.display = 'none';
+                document.getElementById('step2').style.display = 'block';
+            } else if (currentStep === 2) {
+                document.getElementById('step2').style.display = 'none';
+                document.getElementById('step3').style.display = 'flex';
+            } else if (currentStep === 3) {
+            }
+        }
+
+        function prevStep(currentStep) {
+            if (currentStep === 2) {
+                document.getElementById('step2').style.display = 'none';
+                document.getElementById('step1').style.display = 'block';
+            } else if (currentStep === 3) {
+                document.getElementById('step3').style.display = 'none';
+                document.getElementById('step2').style.display = 'block';
+            }
         }
 
         var qs = urlQueryObj();
@@ -261,20 +382,25 @@
         var url = window.location.href;
         var absoluto = url.split("/")[url.split("/").length - 1];
 
-        var elDataIndicator = document.getElementById("dataIndicator");
-        if (url == "{{settings.__app_url}}/create-account/" + absoluto && absoluto != "" && absoluto != "create-account") {
-            checkSponsorAccount(absoluto);
-        } else {
-            elDataIndicator.innerHTML = "Your indicator was not informed.<br />Please contact us and request a link to register.";
+            var elDataIndicator = document.getElementById("dataIndicator");
+            if (url == "{{settings.__app_url}}/create-account/"+absoluto && absoluto != "" && absoluto != "create-account") {
+            //if (url == "https://app.sevencapital.developer.brauntech.com.br/create-account/"+absoluto && absoluto != "" && absoluto != "create-account") {
+                checkSponsorAccount(absoluto);
+            } else {
+                elDataIndicator.innerHTML = "Your indicator was not informed.<br />Please contact us and request a link to register.";
 
-            frmRegister.querySelector("input[name='binary_key']").value = 'right';
-        }
-
-        function checkSponsorAccount(username) {
-            if ((username == "") || (username.length < 4)) {
-                elDataIndicator.innerHTML = '<b>- Undefined indicator -</b>';
-                return;
+                frmRegister.querySelector("input[name='binary_key']").value = 'right';
             }
+            
+            function checkSponsorAccount(username){
+                if ((username == "") || (username.length < 4)){
+                    /**var fullName = document.getElementsByClassName('dataProfileFullName');
+                    for (var i = 0; i < fullName.length; i++) {
+                        fullName[i].innerHTML = '<b>- não definido -</b>';
+                    }*/
+                    elDataIndicator.innerHTML = '<b>- Undefined indicator -</b>';
+                    return;
+                }
 
             $.ajax({
                 type: "POST",
@@ -308,15 +434,17 @@
                         }
 
 
-                        elDataIndicator.innerHTML =
-                            '<div style="width: 100%;display: block;position: relative;height: 60px;">'
+                    ///for (var dataInfo of document.querySelectorAll('.dataInfo')) {
+                        elDataIndicator.innerHTML = 
+                              '<div style="width: 100%;display: block;position: relative;height: 60px;">'
                             + '    <div style="width: 60px;display: block;position: absolute;height: 60px;">'
                             + '        <img src="../assets/img/picker_account.png" style="height: 40px;width: 40px;border-radius: 50%;display: block;margin: 0 auto;padding: 0;margin-top: 6px;">'
                             + '    </div>'
                             + '    <div style="width: calc(100% - 60px);display: block;position: absolute;height: 60px;left: 60px;padding: 4px;">'
-                            + _info
+                            +          _info
                             + '    </div>'
                             + '</div>';
+                    ///}
 
                         document.getElementById("register").classList.remove("disabled");
                         frmRegister.name.focus();
